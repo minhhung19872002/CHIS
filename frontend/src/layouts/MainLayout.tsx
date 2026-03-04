@@ -31,6 +31,7 @@ import type { MenuProps } from 'antd';
 import { useAuth } from '../contexts/AuthContext';
 import { notificationApi } from '../api/notification';
 import ErrorBoundary from '../components/ErrorBoundary';
+import './MainLayout.css';
 
 const { Header, Sider, Content } = Layout;
 
@@ -40,69 +41,69 @@ const menuItems: MenuItem[] = [
   {
     key: '/dashboard',
     icon: <DashboardOutlined />,
-    label: 'Tong quan',
+    label: 'Tổng quan',
   },
   {
     key: 'clinical',
     icon: <MedicineBoxOutlined />,
-    label: 'Kham chua benh',
+    label: 'Khám chữa bệnh',
     children: [
-      { key: '/reception', icon: <UserOutlined />, label: 'Tiep don' },
-      { key: '/examination', icon: <SolutionOutlined />, label: 'Kham benh' },
-      { key: '/inpatient', icon: <HomeOutlined />, label: 'Noi tru' },
-      { key: '/billing', icon: <BankOutlined />, label: 'Vien phi' },
-      { key: '/laboratory', icon: <ExperimentOutlined />, label: 'Xet nghiem' },
-      { key: '/radiology', icon: <FundOutlined />, label: 'Chan doan hinh anh' },
-      { key: '/driver-license-exam', icon: <CarOutlined />, label: 'Kham lai xe' },
+      { key: '/reception', icon: <UserOutlined />, label: 'Tiếp đón' },
+      { key: '/examination', icon: <SolutionOutlined />, label: 'Khám bệnh' },
+      { key: '/inpatient', icon: <HomeOutlined />, label: 'Nội trú' },
+      { key: '/billing', icon: <BankOutlined />, label: 'Viện phí' },
+      { key: '/laboratory', icon: <ExperimentOutlined />, label: 'Xét nghiệm' },
+      { key: '/radiology', icon: <FundOutlined />, label: 'Chẩn đoán hình ảnh' },
+      { key: '/driver-license-exam', icon: <CarOutlined />, label: 'Khám lái xe' },
     ],
   },
   {
     key: 'pharmacy',
     icon: <ContainerOutlined />,
-    label: 'Duoc pham',
+    label: 'Dược phẩm',
     children: [
-      { key: '/pharmacy', icon: <ShoppingOutlined />, label: 'Kho duoc' },
+      { key: '/pharmacy', icon: <ShoppingOutlined />, label: 'Kho dược' },
     ],
   },
   {
     key: 'community-health',
     icon: <HeartOutlined />,
-    label: 'Y te co so',
+    label: 'Y tế cơ sở',
     children: [
-      { key: '/population', icon: <TeamOutlined />, label: 'Quan ly dan so' },
-      { key: '/communicable-disease', icon: <AlertOutlined />, label: 'Benh truyen nhiem' },
-      { key: '/chronic-disease', icon: <MedicineBoxOutlined />, label: 'Benh man tinh' },
+      { key: '/population', icon: <TeamOutlined />, label: 'Quản lý dân số' },
+      { key: '/communicable-disease', icon: <AlertOutlined />, label: 'Bệnh truyền nhiễm' },
+      { key: '/chronic-disease', icon: <MedicineBoxOutlined />, label: 'Bệnh mạn tính' },
       { key: '/reproductive-health', icon: <HeartOutlined />, label: 'CSSKSS' },
-      { key: '/hiv-aids', icon: <SafetyOutlined />, label: 'Phong chong HIV' },
-      { key: '/immunization', icon: <ExperimentOutlined />, label: 'Tiem chung' },
+      { key: '/hiv-aids', icon: <SafetyOutlined />, label: 'Phòng chống HIV' },
+      { key: '/immunization', icon: <ExperimentOutlined />, label: 'Tiêm chủng' },
       { key: '/vitamin-a', icon: <MedicineBoxOutlined />, label: 'Vitamin A' },
-      { key: '/nutrition', icon: <HeartOutlined />, label: 'Phong chong SDD' },
+      { key: '/nutrition', icon: <HeartOutlined />, label: 'Phòng chống SDD' },
       { key: '/injury-prevention', icon: <AlertOutlined />, label: 'TNTT' },
-      { key: '/death-tracking', icon: <FileTextOutlined />, label: 'Tu vong' },
+      { key: '/death-tracking', icon: <FileTextOutlined />, label: 'Tử vong' },
     ],
   },
   {
     key: 'management',
     icon: <AuditOutlined />,
-    label: 'Quan ly',
+    label: 'Quản lý',
     children: [
-      { key: '/health-education', icon: <TeamOutlined />, label: 'Truyen thong GDSK' },
+      { key: '/health-education', icon: <TeamOutlined />, label: 'Truyền thông GDSK' },
       { key: '/environmental-health', icon: <HomeOutlined />, label: 'VSMT' },
       { key: '/food-safety', icon: <SafetyOutlined />, label: 'ATTP' },
-      { key: '/finance', icon: <BankOutlined />, label: 'Tai chinh ke toan' },
-      { key: '/staff-management', icon: <TeamOutlined />, label: 'Nhan luc' },
-      { key: '/equipment-management', icon: <ToolOutlined />, label: 'Tai san thiet bi' },
+      { key: '/finance', icon: <BankOutlined />, label: 'Tài chính kế toán' },
+      { key: '/staff-management', icon: <TeamOutlined />, label: 'Nhân lực' },
+      { key: '/equipment-management', icon: <ToolOutlined />, label: 'Tài sản thiết bị' },
     ],
   },
   {
     key: 'system',
     icon: <SettingOutlined />,
-    label: 'He thong',
+    label: 'Hệ thống',
     children: [
-      { key: '/master-data', icon: <ContainerOutlined />, label: 'Danh muc' },
-      { key: '/reports', icon: <BarChartOutlined />, label: 'Bao cao' },
-      { key: '/system-admin', icon: <SettingOutlined />, label: 'Quan tri' },
-      { key: '/data-interop', icon: <CloudSyncOutlined />, label: 'Lien thong du lieu' },
+      { key: '/master-data', icon: <ContainerOutlined />, label: 'Danh mục' },
+      { key: '/reports', icon: <BarChartOutlined />, label: 'Báo cáo' },
+      { key: '/system-admin', icon: <SettingOutlined />, label: 'Quản trị' },
+      { key: '/data-interop', icon: <CloudSyncOutlined />, label: 'Liên thông dữ liệu' },
     ],
   },
 ];
@@ -161,9 +162,9 @@ export default function MainLayout() {
 
   const userMenu: MenuProps = {
     items: [
-      { key: 'profile', icon: <UserOutlined />, label: 'Thong tin ca nhan' },
+      { key: 'profile', icon: <UserOutlined />, label: 'Thông tin cá nhân' },
       { type: 'divider' },
-      { key: 'logout', icon: <LogoutOutlined />, label: 'Dang xuat', danger: true },
+      { key: 'logout', icon: <LogoutOutlined />, label: 'Đăng xuất', danger: true },
     ],
     onClick: ({ key }) => {
       if (key === 'logout') {
@@ -174,14 +175,27 @@ export default function MainLayout() {
   };
 
   const sidebarContent = (
-    <Menu
-      mode="inline"
-      selectedKeys={[location.pathname]}
-      defaultOpenKeys={findOpenKeys()}
-      items={menuItems}
-      onClick={handleMenuClick}
-      style={{ borderRight: 0 }}
-    />
+    <>
+      <div className="sidebar-logo">
+        <div className="sidebar-logo-mark">
+          <MedicineBoxOutlined />
+        </div>
+        {!collapsed && (
+          <div className="sidebar-logo-text">
+            <span className="name">CHIS</span>
+            <span className="desc">Y tế cơ sở</span>
+          </div>
+        )}
+      </div>
+      <Menu
+        mode="inline"
+        selectedKeys={[location.pathname]}
+        defaultOpenKeys={findOpenKeys()}
+        items={menuItems}
+        onClick={handleMenuClick}
+        className="sidebar-menu"
+      />
+    </>
   );
 
   return (
@@ -192,13 +206,10 @@ export default function MainLayout() {
           collapsed={collapsed}
           onCollapse={setCollapsed}
           width={260}
+          className="layout-sidebar"
           style={{ overflow: 'auto', height: '100vh', position: 'fixed', left: 0, top: 0, bottom: 0, zIndex: 100 }}
-          theme="light"
+          theme="dark"
         >
-          <div style={{ height: 48, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '12px 16px', borderBottom: '1px solid #f0f0f0' }}>
-            <MedicineBoxOutlined style={{ fontSize: 24, color: '#1890ff' }} />
-            {!collapsed && <span style={{ marginLeft: 8, fontWeight: 700, fontSize: 15 }}>CHIS</span>}
-          </div>
           {sidebarContent}
         </Sider>
       )}
@@ -209,37 +220,34 @@ export default function MainLayout() {
           onClose={() => setMobileDrawer(false)}
           placement="left"
           width={280}
+          className="mobile-drawer"
           styles={{ body: { padding: 0 } }}
         >
-          <div style={{ height: 48, display: 'flex', alignItems: 'center', padding: '12px 16px', borderBottom: '1px solid #f0f0f0' }}>
-            <MedicineBoxOutlined style={{ fontSize: 24, color: '#1890ff' }} />
-            <span style={{ marginLeft: 8, fontWeight: 700, fontSize: 15 }}>CHIS</span>
-          </div>
           {sidebarContent}
         </Drawer>
       )}
 
       <Layout style={{ marginLeft: isMobile ? 0 : (collapsed ? 80 : 260), transition: 'margin-left 0.2s' }}>
-        <Header style={{ padding: '0 16px', background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid #f0f0f0', position: 'sticky', top: 0, zIndex: 99 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+        <Header className="layout-header">
+          <div className="header-left">
             {isMobile && (
               <Button type="text" icon={<MenuOutlined />} onClick={() => setMobileDrawer(true)} />
             )}
-            <span style={{ fontSize: 14, color: '#666' }}>He thong thong tin y te co so</span>
+            <span className="header-title">Hệ thống Thông tin Y tế Cơ sở</span>
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+          <div className="header-right">
             <Badge count={unreadCount} size="small">
-              <BellOutlined style={{ fontSize: 18, cursor: 'pointer' }} />
+              <BellOutlined className="header-bell" />
             </Badge>
             <Dropdown menu={userMenu} trigger={['click']}>
-              <div style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 8 }}>
+              <div className="header-user">
                 <Avatar size="small" icon={<UserOutlined />} />
-                <span style={{ fontSize: 13 }}>{user?.fullName || 'User'}</span>
+                <span className="header-user-name">{user?.fullName || 'User'}</span>
               </div>
             </Dropdown>
           </div>
         </Header>
-        <Content style={{ margin: 16, minHeight: 280 }}>
+        <Content className="layout-content">
           <ErrorBoundary>
             <Outlet />
           </ErrorBoundary>

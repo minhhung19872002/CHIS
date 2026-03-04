@@ -1,0 +1,483 @@
+/* ═══════════════════════════════════════════════════════
+   CHIS Login — "Medical Trust" design
+   Deep jade gradient + floating medical motifs + frosted glass
+   ═══════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap');
+
+/* ── Container ── */
+.login-shell {
+  min-height: 100vh;
+  display: flex;
+  font-family: 'Be Vietnam Pro', 'Segoe UI', sans-serif;
+  overflow: hidden;
+  background: #0a1628;
+}
+
+/* ── Left Branding Panel ── */
+.login-brand {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 48px;
+  background: linear-gradient(165deg, #0d3b3e 0%, #0a6b5c 35%, #0f8a6e 60%, #14a085 85%, #1abc9c 100%);
+  overflow: hidden;
+}
+
+/* Noise texture overlay */
+.login-brand::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── Floating Medical Crosses ── */
+.login-brand-motifs {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.med-cross {
+  position: absolute;
+  opacity: 0.06;
+  animation: floatCross 25s ease-in-out infinite;
+}
+
+.med-cross::before,
+.med-cross::after {
+  content: '';
+  position: absolute;
+  background: #fff;
+  border-radius: 3px;
+}
+
+.med-cross::before {
+  width: 12px;
+  height: 36px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.med-cross::after {
+  width: 36px;
+  height: 12px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.med-cross:nth-child(1) { top: 8%; left: 12%; animation-delay: 0s; }
+.med-cross:nth-child(2) { top: 22%; right: 18%; animation-delay: -4s; transform: scale(0.7); }
+.med-cross:nth-child(3) { top: 55%; left: 8%; animation-delay: -8s; transform: scale(1.3); }
+.med-cross:nth-child(4) { bottom: 20%; right: 10%; animation-delay: -12s; transform: scale(0.5); }
+.med-cross:nth-child(5) { top: 40%; left: 45%; animation-delay: -6s; transform: scale(0.8); }
+.med-cross:nth-child(6) { bottom: 35%; left: 25%; animation-delay: -16s; transform: scale(0.6); }
+.med-cross:nth-child(7) { top: 75%; right: 30%; animation-delay: -20s; transform: scale(1.1); }
+
+@keyframes floatCross {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-18px) rotate(5deg); }
+  50% { transform: translateY(-8px) rotate(-3deg); }
+  75% { transform: translateY(-22px) rotate(2deg); }
+}
+
+/* ── Pulse Line (ECG) ── */
+.login-pulse-line {
+  position: absolute;
+  bottom: 80px;
+  left: 0;
+  right: 0;
+  height: 60px;
+  z-index: 1;
+  opacity: 0.1;
+  overflow: hidden;
+}
+
+.login-pulse-line svg {
+  width: 200%;
+  height: 100%;
+  animation: pulseSweep 8s linear infinite;
+}
+
+@keyframes pulseSweep {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ── Brand Content ── */
+.login-brand-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  animation: fadeSlideUp 1s ease-out;
+}
+
+.login-brand-icon {
+  width: 88px;
+  height: 88px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 32px;
+  animation: fadeSlideUp 1s ease-out 0.15s both;
+}
+
+.login-brand-icon svg {
+  width: 44px;
+  height: 44px;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.login-brand-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  letter-spacing: -1px;
+  color: #fff;
+  margin: 0 0 8px;
+  animation: fadeSlideUp 1s ease-out 0.3s both;
+}
+
+.login-brand-sub {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 40px;
+  letter-spacing: 0.3px;
+  line-height: 1.6;
+  animation: fadeSlideUp 1s ease-out 0.45s both;
+}
+
+/* Feature pills */
+.login-brand-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  animation: fadeSlideUp 1s ease-out 0.6s both;
+}
+
+.login-brand-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 100px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 13px;
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+
+.login-brand-pill:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-1px);
+}
+
+.login-brand-pill .pill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #5effc1;
+}
+
+/* ── Right Form Panel ── */
+.login-form-panel {
+  width: 520px;
+  min-width: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 56px;
+  background: #fff;
+  position: relative;
+}
+
+/* Subtle top accent line */
+.login-form-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 56px;
+  right: 56px;
+  height: 3px;
+  background: linear-gradient(90deg, #0a6b5c, #1abc9c, #0a6b5c);
+  border-radius: 0 0 2px 2px;
+  opacity: 0;
+}
+
+.login-form-header {
+  margin-bottom: 40px;
+  animation: fadeSlideUp 0.8s ease-out 0.2s both;
+}
+
+.login-form-greeting {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #0f8a6e;
+  margin: 0 0 8px;
+}
+
+.login-form-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0 0 8px;
+  letter-spacing: -0.5px;
+}
+
+.login-form-desc {
+  font-size: 14px;
+  color: #8892a4;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ── Form Overrides ── */
+.login-form-body {
+  animation: fadeSlideUp 0.8s ease-out 0.4s both;
+}
+
+.login-form-body .ant-form-item-label > label {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.login-form-body .ant-input-lg,
+.login-form-body .ant-input-password-large .ant-input {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  height: 48px;
+  border-radius: 10px;
+  border-color: #e2e8f0;
+  font-size: 14px;
+  transition: all 0.25s ease;
+}
+
+.login-form-body .ant-input-lg:hover,
+.login-form-body .ant-input-password-large:hover .ant-input {
+  border-color: #0f8a6e;
+}
+
+.login-form-body .ant-input-lg:focus,
+.login-form-body .ant-input-password-large .ant-input:focus {
+  border-color: #0f8a6e;
+  box-shadow: 0 0 0 3px rgba(15, 138, 110, 0.08);
+}
+
+.login-form-body .ant-input-affix-wrapper-lg {
+  border-radius: 10px;
+  border-color: #e2e8f0;
+  padding: 0 14px;
+  height: 48px;
+  transition: all 0.25s ease;
+}
+
+.login-form-body .ant-input-affix-wrapper-lg:hover {
+  border-color: #0f8a6e;
+}
+
+.login-form-body .ant-input-affix-wrapper-focused {
+  border-color: #0f8a6e !important;
+  box-shadow: 0 0 0 3px rgba(15, 138, 110, 0.08) !important;
+}
+
+.login-form-body .ant-input-prefix {
+  color: #a0aec0;
+  margin-right: 10px;
+}
+
+/* Submit button */
+.login-submit-btn {
+  height: 48px !important;
+  border-radius: 10px !important;
+  font-family: 'Be Vietnam Pro', sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.3px;
+  background: linear-gradient(135deg, #0d3b3e 0%, #0f8a6e 100%) !important;
+  border: none !important;
+  box-shadow: 0 4px 15px rgba(15, 138, 110, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+.login-submit-btn:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 25px rgba(15, 138, 110, 0.4) !important;
+}
+
+.login-submit-btn:active {
+  transform: translateY(0) !important;
+}
+
+/* ── OTP Panel ── */
+.login-otp-panel {
+  animation: fadeSlideUp 0.6s ease-out;
+}
+
+.login-otp-icon-wrapper {
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(15, 138, 110, 0.08), rgba(26, 188, 156, 0.12));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+
+.login-otp-icon-wrapper .anticon {
+  font-size: 32px;
+  color: #0f8a6e;
+}
+
+.login-otp-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 8px;
+}
+
+.login-otp-desc {
+  color: #8892a4;
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+
+.login-otp-input {
+  margin-bottom: 24px;
+}
+
+.login-otp-input .ant-otp {
+  gap: 12px;
+}
+
+.login-otp-input .ant-otp input {
+  width: 52px !important;
+  height: 56px !important;
+  border-radius: 12px !important;
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 22px !important;
+  font-weight: 600 !important;
+  border-color: #e2e8f0 !important;
+  transition: all 0.25s ease;
+}
+
+.login-otp-input .ant-otp input:focus {
+  border-color: #0f8a6e !important;
+  box-shadow: 0 0 0 3px rgba(15, 138, 110, 0.1) !important;
+}
+
+.login-otp-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-otp-resend {
+  color: #8892a4 !important;
+  font-size: 13px !important;
+}
+
+.login-otp-resend:not(:disabled):hover {
+  color: #0f8a6e !important;
+}
+
+.login-otp-back {
+  color: #0f8a6e !important;
+  font-size: 13px !important;
+}
+
+/* ── Footer ── */
+.login-form-footer {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid #f0f0f5;
+  animation: fadeSlideUp 0.8s ease-out 0.6s both;
+}
+
+.login-form-footer p {
+  font-size: 12px;
+  color: #a0aec0;
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* ── Animations ── */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .login-brand {
+    display: none;
+  }
+  .login-form-panel {
+    width: 100%;
+    min-width: unset;
+    min-height: 100vh;
+    padding: 40px 32px;
+    background:
+      linear-gradient(180deg, rgba(15, 138, 110, 0.03) 0%, transparent 40%),
+      #fff;
+  }
+  .login-form-panel::before {
+    left: 32px;
+    right: 32px;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-form-panel {
+    padding: 32px 20px;
+  }
+  .login-form-title {
+    font-size: 24px;
+  }
+  .login-otp-input .ant-otp {
+    gap: 8px;
+  }
+  .login-otp-input .ant-otp input {
+    width: 44px !important;
+    height: 48px !important;
+    font-size: 18px !important;
+  }
+}

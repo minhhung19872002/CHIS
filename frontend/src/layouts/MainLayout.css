@@ -1,0 +1,251 @@
+/* ═══════════════════════════════════════════════════════
+   CHIS MainLayout — "Medical Trust" sidebar + header
+   ═══════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap');
+
+/* ── Sidebar ── */
+.layout-sidebar {
+  font-family: 'Be Vietnam Pro', sans-serif !important;
+  background: linear-gradient(180deg, #0d2b2e 0%, #0a1f22 100%) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.layout-sidebar .ant-layout-sider-children {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Logo block */
+.sidebar-logo {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  gap: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.sidebar-logo-mark {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #0f8a6e, #1abc9c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sidebar-logo-mark .anticon {
+  font-size: 18px;
+  color: #fff;
+}
+
+.sidebar-logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.sidebar-logo-text .name {
+  font-family: 'Outfit', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.3px;
+}
+
+.sidebar-logo-text .desc {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.35);
+  margin-top: 2px;
+  font-weight: 400;
+}
+
+/* Sidebar menu override */
+.sidebar-menu {
+  background: transparent !important;
+  border-right: none !important;
+  padding: 8px 6px;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sidebar-menu .ant-menu-item,
+.sidebar-menu .ant-menu-submenu-title {
+  font-family: 'Be Vietnam Pro', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  color: rgba(255, 255, 255, 0.55) !important;
+  border-radius: 8px !important;
+  margin: 1px 0 !important;
+  height: 38px !important;
+  line-height: 38px !important;
+  transition: all 0.2s ease !important;
+}
+
+.sidebar-menu .ant-menu-item:hover,
+.sidebar-menu .ant-menu-submenu-title:hover {
+  color: rgba(255, 255, 255, 0.9) !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+}
+
+.sidebar-menu .ant-menu-item-selected {
+  background: linear-gradient(135deg, rgba(15, 138, 110, 0.25), rgba(26, 188, 156, 0.15)) !important;
+  color: #5effc1 !important;
+  font-weight: 500 !important;
+}
+
+.sidebar-menu .ant-menu-item-selected::after {
+  display: none !important;
+}
+
+/* Submenu group titles */
+.sidebar-menu .ant-menu-submenu > .ant-menu-submenu-title {
+  font-weight: 500 !important;
+  color: rgba(255, 255, 255, 0.4) !important;
+  text-transform: uppercase;
+  font-size: 11px !important;
+  letter-spacing: 0.8px !important;
+}
+
+.sidebar-menu .ant-menu-sub {
+  background: transparent !important;
+}
+
+.sidebar-menu .ant-menu-sub .ant-menu-item {
+  padding-left: 44px !important;
+  font-size: 13px !important;
+}
+
+/* Icon color */
+.sidebar-menu .ant-menu-item .anticon,
+.sidebar-menu .ant-menu-submenu-title .anticon {
+  font-size: 15px !important;
+  color: rgba(255, 255, 255, 0.35) !important;
+  transition: color 0.2s ease;
+}
+
+.sidebar-menu .ant-menu-item:hover .anticon,
+.sidebar-menu .ant-menu-submenu-title:hover .anticon {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.sidebar-menu .ant-menu-item-selected .anticon {
+  color: #5effc1 !important;
+}
+
+/* Collapse trigger */
+.layout-sidebar .ant-layout-sider-trigger {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.35);
+  transition: all 0.2s ease;
+}
+
+.layout-sidebar .ant-layout-sider-trigger:hover {
+  background: rgba(255, 255, 255, 0.06) !important;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ── Header ── */
+.layout-header {
+  height: 56px;
+  padding: 0 24px !important;
+  background: #fff !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f0f0f5;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-left .header-title {
+  font-size: 13px;
+  color: #8892a4;
+  font-weight: 400;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-bell {
+  font-size: 18px;
+  color: #8892a4;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  padding: 4px;
+}
+
+.header-bell:hover {
+  color: #0f8a6e;
+}
+
+.header-user {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.header-user:hover {
+  background: #f8f9fa;
+}
+
+.header-user .ant-avatar {
+  background: linear-gradient(135deg, #0f8a6e, #1abc9c) !important;
+}
+
+.header-user-name {
+  font-size: 13px;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+/* ── Content ── */
+.layout-content {
+  margin: 20px;
+  min-height: 280px;
+}
+
+/* ── Mobile Drawer ── */
+.mobile-drawer .ant-drawer-body {
+  padding: 0 !important;
+  background: linear-gradient(180deg, #0d2b2e 0%, #0a1f22 100%);
+}
+
+.mobile-drawer .ant-drawer-header {
+  display: none;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .layout-header {
+    padding: 0 12px !important;
+  }
+  .layout-content {
+    margin: 12px;
+  }
+}
