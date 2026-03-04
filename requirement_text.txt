@@ -1,0 +1,1152 @@
+0: Chương V. YÊU CẦU VỀ KỸ THUẬT
+2: 1. Giới thiệu chung về dự toán mua sắm, gói thầu
+3: a. Dự án/dự toán mua sắm:
+4: - Dự toán mua sắm: Thuê phần mềm quản lý y tế cơ sở phục vụ hoạt động tại các cơ sở y tế thuộc Trung tâm y tế huyện Thường Tín.
+5: - Chủ đầu tư: Trung tâm Y tế huyện Thường Tín
+6: - Bên mời thầu:Trung tâm Y tế huyện Thường Tín
+7: - Nguồn vốn: Nguồn thu bảo hiểm khám chữa bệnh
+8: - Địa điểm thực hiện: Cung phần mềm quản lý y tế cơ sở tại 29 trạm y tế xã, thị trấn và 01 Phòng khám đa khoa.
+9: b. Gói thầu:
+10: - Tên gói thầu: Thuê phần mềm quản lý y tế cơ sở phục vụ hoạt động tại các cơ sở y tế thuộc Trung tâm y tế huyện Thường Tín. 
+11: - Loại hợp đồng: Hợp đồng trọn gói.
+12: - Hình thức lựa chọn nhà thầu: Đấu thầu rộng rãi qua mạng.
+13: - Phương thức lựa chọn nhà thầu: Một giai đoạn một túi hồ sơ
+14: - Thời gian thực hiện gói thầu: 24 tháng
+15: 2. Phạm vi cung cấp dịch vụ
+17: 3. Yêu cầu về kỹ thuật dịch vụ cung cấp
+19: 2.3. Yêu cầu khác
+20: Nhà thầu phải đảm bảo tiến độ:  tiến độ triển khai chi tiết, rõ ràng (Đưa hệ thống phần mềm quản lý vào hoạt động): ≤05 ngày kể từ khi hợp đồng có hiệu lực. Đảm bảo dữ liệu hiện tại của Trung tâm hoặc chuyển dữ liệu từ hệ thống phần mềm cũ đang sử dung sang hệ thống phần mềm mới (phần mềm cung cấp). Toàn bộ dữ liệu sau khi chuyển đổi phải đúng, đầy đủ và phải chỉnh sửa, cập nhật được dữ liệu cũ..
+21: Nhà thầu phải có trách nhiệm thực hiện đào tạo, hướng dẫn sử dụng cho cán bộ của Chủ đầu tư khi đưa vào vận hành, đảm bảo đáp ứng yêu cầu về đào tạo, chuyển giao công nghệ.
+22: Yêu cầu về tài liệu Chuyển giao đầy đủ tài liệu đào tạo (tài liệu hướng dẫn sử dụng phần mềm; tài liệu hướng dẫn quản trị phần mềm) cho Chủ đầu tư. Tài liệu đào tạo sẽ được chuẩn bị bằng tiếng Việt. 
+23: Nhà cung cấp dịch vụ phải cam kết bảo mật toàn bộ các cấu trúc, sơ đồ hệ thống, thông tin, dữ liệu trong quá trình cung cấp dịch vụ và chịu toàn bộ trách nhiệm khi vi phạm các quy định của pháp luật và nghĩa vụ của bên cung cấp dịch vụ.
+24: Nhà thầu cam kết và demo, trình bày cụ thể giải pháp kỹ thuật phục vụ công tác quản lý, vận hành … một cách đầy đủ, dễ hiểu, khoa học trong vòng 03 ngày kể từ khi bên mời thầu yêu cầu (Giải pháp được đánh giá là đạt khi được CĐT/bên mời thầu chấp thuận). 
+25: Nhà thầu phải hỗ trợ đơn vị sử dụng phần mềm 24/7 bao gồm ngày hành chính, lễ và dịp tết khi có yêu cầu qua điện thoại tổng đài, số điện thoại cá nhân, hỗ trợ zalo hoặc telegram.
+26: Khi có sự cố hệ thống mà không thể hỗ trợ trực tuyến thì nhà thầu phải cử nhân sự hỗ trợ trực tiếp tại đơn vị trong vòng 4 giờ khi có yêu cầu của đơn vị.
+27: Để chứng minh sự đáp ứng của dịch vụ so với yêu cầu của E-HSMT, nhà thầu phải cung cấp các tài liệu là một phần của E-HSDT để chứng minh rằng các dịch vụ mà mình cung cấp phù hợp với các yêu cầu và tiêu chuẩn kỹ thuật trong E-HSMT.
+28: 4. Giải pháp và phương pháp luận:
+29: Nhà thầu chuẩn bị đề xuất giải pháp, phương pháp luận tổng quát thực hiện dịch vụ theo các nội dung quy định tại Chương V, gồm các phần như sau: 
+30: 1. Giải pháp và phương pháp luận;
+31: 2.  Kế hoạch công tác.
+32: 5. Quy định về kiểm tra, nghiệm thu sản phẩm: Theo quy định hiện hành
+
+=== TABLE 0 ===
+Row 0: STT | Tên dịch vụ | Thời gian sử dụng
+(tháng) | Số lượng
+(đơn vị) | Địa điểm thực hiện | Mô tả dịch vụ
+Row 1: 1 | Thuê Hệ thống Phần mềm quản lý y tế cơ sở tại các trạm y tế xã, thị trấn | 24 | 29 | Tại 29 trạm y tế xã, thị trấn | Đáp ứng Quy định tại Mục 3. Yêu cầu về kỹ thuật dịch vụ cung cấp
+Row 2: 2 | Thuê Hệ thống Phần mềm quản lý y tế cơ sở tại phòng khám Đa Khoa | 24 | 01 | Tại 01 phòng khám Đa Khoa | Đáp ứng Quy định tại Mục 3. Yêu cầu về kỹ thuật dịch vụ cung cấp
+
+=== TABLE 1 ===
+Row 0: STT | Tên phân hệ | Chức năng | Yêu cầu chi tiết dịch vụ
+Row 1: I | Phân hệ Quản trị hệ thống | Phân hệ Quản trị hệ thống | Phân hệ Quản trị hệ thống
+Row 2: 1 |  | Quản lý người dùng | - Sửa thông tin tài khoản
+- Xóa tài khoản
+- Phân quyền
+Row 3: 2 |  | Phân quyền người dùng | - Thêm mới phân quyền
+- Sửa thông tin phân quyền
+- Xóa quyền
+Row 4: 3 |  | Cấu hình tham số bệnh viện | - Đồng bộ tham số bệnh viện
+Sửa tham số
+- Ngừng sử dụng tham số
+- Tìm kiếm tham số
+Row 5: 4 |  | Quản trị người dùng và vai trò đơn vị | - Tìm kiếm tài khoản
+- Đổi mật khẩu
+Row 6: II | Phân hệ Quản lý danh mục - cấu hình | Phân hệ Quản lý danh mục - cấu hình | Phân hệ Quản lý danh mục - cấu hình
+Row 7: 1 |  | Danh mục nhân viên | - Thêm mới nhân viên
+- Tạm ngưng nhân viên
+- Sửa thông tin nhân viên
+- Tìm kiếm
+Row 8: 2 |  | Danh mục vật tư y tế phê duyệt | - Thêm mới vật tư y tế phê duyệt
+- Tìm kiếm vật tư y tế phê duyệt
+- Import danh sách vật tư y tế phê duyệt
+- Xoá vật tư y tế phê duyệt
+Row 9: 3 |  | Danh mục dược phẩm phê duyệt | - Thêm mới dược phẩm phê duyệt
+- Tìm kiếm dược phẩm phê duyệt
+- Import danh sách dược phẩm phê duyệt
+- Xoá dược phẩm phê duyệt
+Row 10: 4 |  | Danh mục dịch vụ kỹ thuật (DVKT) phê duyệt | - Thêm mới dịch vụ kỹ thuật phê duyệt
+- Tìm kiếm dịch vụ kỹ thuật phê duyệt
+- Import danh sách dịch vụ kỹ thuật
+- Xoá danh sách dịch vụ kỹ thuật
+Row 11: 5 |  | Danh mục kho dược | - Thêm mới kho dược
+- Xóa kho dược
+- Sửa thông tin kho dược
+- Tìm kiếm kho dược
+Row 12: 6 |  | Danh mục phòng ban | - Thêm mới phòng ban
+- Sửa thông tin phòng ban
+- Xóa phòng ban
+- Tìm kiếm phòng ban
+Row 13: 7 |  | Danh mục nhà cung cấp | - Thêm mới nhà cung cấp
+- Sửa thông tin nhà cung cấp
+- Xóa nhà cung cấp
+- Tìm kiếm nhà cung cấp
+Row 14: 8 |  | Danh mục thiết bị | - Thêm mới thiết bị
+- Sửa thông tin thiết bị
+- Xóa thông tin thiết bị
+- Tìm kiếm thiết bị
+Row 15: 9 |  | Danh mục giường bệnh | - Thêm mới giường bệnh
+- Sửa thông tin giường bệnh
+- Xóa thông tin giường bệnh
+- Tìm kiếm giường bệnh
+Row 16: 10 |  | Danh mục cộng tác viên | - Thêm mới cộng tác viên
+- Sửa thông tin cộng tác viên
+- Xóa thông tin cộng tác viên 
+- Tìm kiếm cộng tác viên
+Row 17: 11 |  | Danh mục dược phẩm bệnh viện | - Thêm mới dược phẩm bệnh viện/vật tư y tế
+- Sửa thông tin dược phẩm/vật tư y tế
+- Ngừng sử dụng dược phẩm/vật tư y tế
+- Tìm kiếm dược phẩm/vật tư y tế
+- Import danh sách vật tư 
+- Import danh sách dược phẩm
+Row 18: 12 |  | Danh mục từ điển khám bệnh | - Thêm mới từ điển khám bệnh
+- Sửa thông tin từ điển khám bệnh 
+- Xóa thông tin từ điển khám bệnh
+- Tìm kiếm từ điển khám bệnh
+Row 19: 13 |  | Danh mục toa thuốc mẫu | - Thêm mới toa thuốc mẫu
+- Sửa thông tin toa thuốc mẫu
+- Xóa toa thuốc mẫu
+- Tìm kiếm toa thuốc mẫu
+Row 20: 14 |  | Cấu hình đối tượng - loại giá | - Cấu hình loại giá cho đối tượng BHYT
+- Cấu hình loại giá cho đối tượng Thu phí
+- Cấu hình loại giá cho đối tượng Miễn phí
+Row 21: 15 |  | Cấu hình đối tượng - kho dược nội trú | - Cấu hình kho dược nội trú cho đối tượng BHYT
+- Cấu hình kho dược nội trú cho đối tượng Thu phí
+- Cấu hình kho dược nội trú cho đối tượng Miễn phí
+Row 22: 16 |  | Cấu hình đối tượng - kho dược ngoại trú | - Cấu hình kho dược ngoại trú cho đối tượng BHYT
+- Cấu hình kho dược ngoại trú cho đối tượng Thu phí
+- Cấu hình kho dược ngoại trú cho đối tượng Miễn phí
+Row 23: 17 |  | Cấu hình dịch vụ - sổ khám | Cấu hình dịch vụ - sổ khám cho đối tượng
+Row 24: 18 |  | Cấu hình giá dịch vụ | - Phát hành giá dịch vụ theo khoảng thời gian
+- Chỉnh sửa giá dịch vụ
+Row 25: 19 |  | Cấu hình giá dịch vụ tuyến dưới | - Tìm kiếm giá dịch vụ theo khoảng thời gian
+- Tìm kiếm giá dịch vụ tuyến dưới
+Row 26: 20 |  | Cấu hình phòng ban - dịch vụ | Cấu hình phòng ban - dịch vụ tương ứng
+Row 27: III | Phân hệ Khám bệnh, chữa bệnh | Phân hệ Khám bệnh, chữa bệnh | Phân hệ Khám bệnh, chữa bệnh
+Row 28: III.1 | Phân hệ Tiếp đón | Phân hệ Tiếp đón | Phân hệ Tiếp đón
+Row 29: 1 |  | Tiếp đón bệnh nhân | - Thêm mới bệnh nhân
+- Lưu bệnh nhân
+- Làm mới bệnh nhân
+- Lưu và tiếp đón mới
+Row 30: 2 |  | Danh sách bệnh nhân đã đăng ký | - Tìm kiếm danh sách bệnh nhân đã đăng ký 
+- Khám bệnh
+- Thanh toán
+- In bệnh nhân
+- Xem chi tiết thông tin bệnh nhân
+- Sửa thông tin bệnh nhân
+- Xóa bệnh nhân
+Row 31: III.2 | Phân hệ Khám bệnh | Phân hệ Khám bệnh | Phân hệ Khám bệnh
+Row 32: 1 |  | Khám bệnh xã phường | - Thêm mới bệnh nhân
+- Lưu khám bệnh 
+- Làm mới
+Row 33: 2 |  | Khám bệnh xã/ phường- In phiếu | - Chuyển viện
+- Bảng kê chi phí BHYT (Mẫu cũ)
+- Bảng kê chi phí BHYT (Mẫu mới 6556)
+- Bảng kê chi phí BHYT (Mẫu 6556 gộp thuốc, DV)
+- Bảng kê chi phí BHYT (Mẫu in đối tượng Covid)
+- Mẫu 08 GDYT
+- Bảng kê chi phí BHYT + VP
+- Phiếu khám bệnh
+- Phiếu vào viện
+- Tờ điều trị
+Row 34: 3 |  | Chỉ định dịch vụ | - Chọn dịch vụ
+- Lưu dịch vụ
+- Sửa dịch vụ
+- In danh sách dịch vụ
+Row 35: 4 |  | Khám bệnh xã/ phường - Kê đơn thuốc | - Thêm đơn thuốc
+- In đơn thuốc
+- Sửa đơn thuốc
+- Hủy đơn thuốc
+- Xem thông tin đơn thuốc
+Row 36: 5 |  | Khám bệnh xã/ phường - Chuyển viện | - Thêm thông tin chuyển viện
+- Lưu thông tin chuyển viện
+- Sửa thông tin chuyển viện
+Row 37: 6 |  | Khám bệnh xã/ phường - Cấp giấy nghỉ ốm | - Thêm thông tin giấy nghỉ ốm
+- Lưu thông tin giấy nghỉ ốm
+- Sửa thông tin giấy nghỉ ốm
+Row 38: 7 |  | Khám bệnh xã/ phường - Sổ theo dõi Lao | - Thêm bệnh nhân vào danh sách sổ lao
+- Sửa bệnh nhân trong danh sách sổ lao
+- Xóa bệnh nhân trong danh sách sổ lao
+Row 39: 8 |  | Khám bệnh xã/ phường - Sổ theo dõi Tâm thần | - Thêm bệnh nhân vào danh sách sổ theo dõi Tâm thần
+- Sửa bệnh nhân trong danh sách sổ theo dõi Tâm thần
+- Xóa bệnh nhân trong danh sách sổ theo dõi Tâm thần
+Row 40: 9 |  | Khám bệnh xã/ phường - Đăng ký nhập viện | - Thêm thông tin nhập viện
+- Lưu thông tin nhập viện
+- Sửa thông tin nhập viện
+Row 41: 10 |  | Phân hệ khám bệnh - Khám phụ khoa | - Thêm bệnh nhân vào danh sách sổ khám phụ khoa
+- Sửa bệnh nhân trong danh sách sổ khám phụ khoa
+- Xóa bệnh nhân trong danh sách sổ khám phụ khoa
+Row 42: 11 |  | Khám bệnh xã/ phường - Sổ thực hiện biện pháp KHHGĐ | - Thêm bệnh nhân vào danh sách sổ thực hiện biện pháp KHHGĐ
+- Sửa bệnh nhân trong danh sách sổ thực hiện biện pháp KHHGĐ
+- Xóa bệnh nhân trong danh sách sổ thực hiện biện pháp KHHGĐ
+Row 43: 12 |  | Khám bệnh xã/ phường - Sổ theo dõi bệnh nhân sốt rét | - Thêm bệnh nhân vào danh sách sổ theo dõi bệnh nhân sốt rét
+- Sửa bệnh nhân trong danh sách sổ theo dõi bệnh nhân sốt rét 
+- Xóa bệnh nhân trong danh sách sổ theo dõi bệnh nhân sốt rét
+Row 44: 13 |  | Khám bệnh xã/ phường - Sổ theo dõi bệnh nhân HIV | - Thêm bệnh nhân vào danh sách sổ theo dõi bệnh nhân HIV
+- Sửa bệnh nhân trong danh sách sổ theo dõi bệnh nhân HIV
+- Xóa bệnh nhân trong danh sách sổ theo dõi bệnh nhân HIV
+Row 45: 14 |  | Khám bệnh xã/ phường - Sổ theo dõi bệnh không lây nhiễm | - Thêm bệnh nhân vào danh sách sổ theo dõi bệnh không lây nhiễm
+- Sửa bệnh nhân trong danh sách sổ theo dõi bệnh không lây nhiễm
+- Xóa bệnh nhân trong danh sách sổ theo dõi bệnh không lây nhiễm
+Row 46: 15 |  | Khám bệnh xã/ phường - Bệnh án ngoại trú | - Thêm mới bệnh án ngoại trú
+- Sửa bệnh án ngoại trú
+- Xóa bệnh án ngoại trú
+Row 47: 16 |  | Khám bệnh xã/ phường - Hồ sơ bệnh án chi tiết | - Thêm mới hồ sơ bệnh án chi tiết
+- Sửa hồ sơ bệnh án chi tiết
+- Xóa hồ sơ bệnh án chi tiết
+Row 48: 17 |  | Thông tin bệnh án ngoại trú | - Lưu bệnh án ngoại trú
+- In bệnh án ngoại trú
+Row 49: 18 |  | Thông tin bệnh án nội khoa | - Lưu bệnh án nội khoa
+- In bệnh án nội khoa
+Row 50: 19 |  | Thông tin bệnh án điều dưỡng, phục hồi chức năng | - Lưu bệnh án bệnh án điều dưỡng, phục hồi chức năng
+- In bệnh án bệnh án điều dưỡng, phục hồi chức năng
+Row 51: 20 |  | Thông tin bệnh án sản khoa | - Lưu thông tin bệnh án sản khoa
+- In thông tin bệnh án sản khoa
+Row 52: 21 |  | Thông tin bệnh án sơ sinh | - Lưu thông tin bệnh án sơ sinh
+- In thông tin bệnh án sơ sinh
+Row 53: 22 |  | Thông tin bệnh án tâm thần | - Lưu thông tin bệnh án tâm thần 
+- In thông tin bệnh án tâm thần
+Row 54: 23 |  | Thông tin bệnh án tăng huyết áp | - Lưu thông tin bệnh án tăng huyết áp
+- In thông tin bệnh án tăng huyết áp
+Row 55: 24 |  | Thông tin bệnh án y học cổ truyền | - Lưu thông tin bệnh án y học cổ truyền
+- In thông tin bệnh án y học cổ truyền
+Row 56: 25 |  | Thông tin bệnh án tiểu đường | - Lưu thông tin bệnh án tiểu đường
+- In thông tin bệnh án tiểu đường
+Row 57: 26 |  | Thông tin bệnh án răng hàm mặt | - Lưu thông tin bệnh án răng hàm mặt
+- In thông tin bệnh án răng hàm mặt
+Row 58: 27 |  | Thông tin bệnh án tay chân miệng | - Lưu thông tin bệnh án tay chân miệng
+- In thông tin bệnh án tay chân miệng
+Row 59: 28 |  | Thông tin bệnh án phá thai | - Lưu thông tin bệnh án phá thai
+- In thông tin bệnh án tay phá thai
+Row 60: 29 |  | Khám bệnh xã/ phường - Danh sách hồ sơ bệnh án | - Sửa bệnh án ngoại trú
+- Xóa bệnh án ngoại trú
+Row 61: 30 |  | Khám bệnh xã/ phường - Tờ điều trị BN mãn tính | - Thêm mới tờ điều trị bệnh nhân mãn tính
+- Sửa tờ điều trị 
+- Xóa tờ điều trị
+- In tờ điều trị
+- Lưu tờ điều trị
+- Biểu đồ huyết áp, Đường huyết
+Row 62: 31 |  | Biểu đồ huyết áp, đường huyết | - Xem biểu đồ huyết áp
+- Xem biểu đồ đường huyết
+Row 63: 32 |  | Khám bệnh xã/ phường - Dữ liệu hồ sơ y tế điện tử | Hệ thống liên kết với hệ thống Hồ sơ sức khỏe cho phép người dùng xem lịch sử khám từ hệ thống Hồ sơ sức khỏe và các báo cáo liên quan
+Row 64: 33 |  | Khám bệnh xã/ phường - QL diễn biến điều trị | - Thêm mới quản lý diễn biến điều trị
+- Sửa quản lý diễn biến điều trị
+- Xóa quản lý diễn biến điều trị
+- Lưu quản lý điều trị
+Row 65: 34 |  | Khám bệnh xã/ phường - Phiếu chăm sóc | - Thêm mới phiếu chăm sóc
+- Sửa phiếu chăm sóc
+- Xóa phiếu chăm sóc
+- Lưu phiếu chăm sóc
+Row 66: 35 |  | Phiếu truyền oxytocin | - Thêm mới phiếu truyền oxytocin
+- In phiếu truyền oxytocin
+- Sửa phiếu truyền oxytocin
+- Xóa phiếu phiếu truyền oxytocin
+Row 67: 36 |  | Phiếu truyền dịch | - Thêm mới phiếu truyền dịch
+- In phiếu truyền dịch
+- Sửa phiếu truyền dịch
+- Xóa dịch truyền
+- Thêm dịch truyền
+- Sửa dịch truyền
+Row 68: 37 |  | Phiếu phẫu thuật/thủ thuật | - Thêm mới phẫu thuật/thủ thuật
+- Lưu phiếu phẫu thuật/ thủ thuật
+- Sửa phiếu phẫu thuật/thủ thuật
+- Xóa phiếu phẫu thuật/thủ thuật
+Row 69: 38 |  | Khám sức khỏe Giấy phép lái xe | - Nhập thông tin bệnh nhân
+- Sửa thông tin bệnh nhân
+- Xoá thông tin bệnh nhân
+- Ký số & Liên thông
+Row 70: 39 |  | Đổi đối tượng ngoại trú | - Tìm kiếm đối tượng ngoại trú
+- Sửa đối tượng ngoại trú
+Row 71: 40 |  | Cập nhật thông tin bệnh nhân | - Tìm kiếm bệnh nhân
+- Sửa thông tin bệnh nhân
+Row 72: 41 |  | Danh sách khám bệnh | - Tìm kiếm bệnh nhân
+- Xóa bệnh nhân
+- Xem chi tiết bệnh nhân
+- Hủy xác nhận chi phí
+Row 73: 42 |  | Cập nhật thông tin bệnh nhân | - Tìm kiếm bệnh nhân
+- Sửa thông tin bệnh nhân
+Row 74: 43 |  | Danh sách bệnh nhân các cấp | Cho phép người dùng thống kê bệnh nhân các cấp
+Row 75: 44 |  | Danh sách bệnh nhân điều trị ngoại trú | - Tìm kiếm bệnh nhân
+- Xem thông tin bệnh nhân
+Row 76: 45 |  | Thống kê khám bệnh | Thống kê báo cáo
+Row 77: 46 |  | Bệnh nhân đặt khám online | Tìm kiếm bệnh nhân đặt khám online
+Khám bệnh
+Row 78: III.3 | Phân hệ Điêu trị Nội trú | Phân hệ Điêu trị Nội trú | Phân hệ Điêu trị Nội trú
+Row 79: 1 |  | Nhập viện | - Thêm mới 
+- Lưu và nhập viện mới
+- Làm mới
+- Xóa thông tin bệnh nhân
+- Sửa thông tin bệnh nhân
+- In thông tin bệnh nhân
+Row 80: 2 |  | Danh sách nhập viện | Tìm kiếm bệnh nhân nhập viện
+Row 81: 3 |  | Danh sách hiện diện | Tìm kiếm bệnh nhân nội trú
+Row 82: 4 |  | Quản lý dấu hiệu sinh tồn | - Thêm mới dấu hiệu sinh tồn
+- Sửa dấu hiệu sinh tồn
+- Biểu đồ quản lý dấu hiệu sinh tồn
+Row 83: 5 |  | Phiếu chăm sóc | - Thêm mới phiếu chăm sóc
+- Lưu phiếu chăm sóc
+- Sửa phiếu chăm sóc
+- In phiếu chăm sóc
+- Xóa phiếu chăm sóc
+Row 84: 6 |  | Phiếu truyền oxytocin | - Thêm mới phiếu truyền oxytocin
+ - In phiếu truyền oxytocin
+- Sửa phiếu truyền oxytocin
+- Xóa phiếu truyền oxytocin
+Row 85: 7 |  | Phiếu truyền dịch | - Thêm mới phiếu truyền dịch
+- In phiếu truyền dịch
+- Sửa phiếu truyền dịch
+- Xóa phiếu truyền dịch 
+- Thêm dịch truyền
+- Sửa dịch truyền
+Row 86: 8 |  | Danh sách hiện diện - Chỉ định dịch vụ | - Chọn dịch vụ
+- Lưu dịch vụ
+- In danh sách dịch vụ
+Row 87: 9 |  | Danh sách hiện diện - Kê đơn thuốc | - Thêm đơn thuốc
+- In đơn thuốc
+- Sửa đơn thuốc
+- Hủy đơn thuốc
+Row 88: 10 |  | Quản lý diễn biến điều trị | - Thêm mới quản lý diến biến điều trị
+- Sửa quản lý diến biến điều trị
+- Xóa quản lý diến biến điều trị
+- Lưu quản lý điều trị
+Row 89: 11 |  | In phiếu lĩnh dược | - Tìm kiếm phiếu lĩnh dược
+- In phiếu lĩnh dược
+Row 90: 12 |  | Danh sách hiện diện - Tờ điều trị | - Thêm mới tờ điều trị bệnh nhân mãn tính
+- Sửa tờ điều trị 
+- Xóa tờ điều trị
+- In tờ điều trị
+- Lưu tờ điều trị
+Row 91: 13 |  | Hồ sơ bệnh án chi tiết | - Lưu hồ sơ
+- In hồ sơ
+Row 92: 14 |  | Xuất khoa | - Thêm thông tin bệnh nhân
+- Lưu thông tin bệnh nhân 
+- Xem thông tin bệnh nhân
+Row 93: 15 |  | Danh sách xuất khoa | Tìm kiếm danh sách bệnh nhân xuất khoa
+Row 94: 16 |  | Giấy ra viện | - Thêm thông tin giấy ra viện
+- Lưu thông tin giấy ra viện
+- In giấy ra viện
+Row 95: 17 |  | Xem dịch vụ đã chỉ định | - Xem dịch vụ
+- In chỉ định dịch vụ
+- Xuất excel danh sách dịch vụ đã chỉ định
+Row 96: 18 |  | Xem thuốc đã kê | - Xem đơn thuốc
+- In đơn thuốc
+Row 97: III.4 | Phân hệ viện phí | Phân hệ viện phí | Phân hệ viện phí
+Row 98: 1 |  | Khai báo sổ biên lai | - Thêm mới sổ biên lai
+- Tìm kiếm sổ biên lai
+Row 99: 2 |  | Xác nhận BHYT ngoại trú – In mẫu 03/TYT, 01/BV, 01/KBCB | - Tìm kiếm BHYT ngoại trú
+- Xác nhận BHYT ngoại trú
+- Hủy xác nhận BHYT ngoại trú
+- In mẫu 6556
+- In mẫu 6556 gộp thuốc, dịch vụ
+Row 100: 3 |  | Xác nhận BHYT nội trú – In mẫu 03/TYT, 02/BV, 01/KBCB | - Tìm kiếm BHYT nội trú
+- Xác nhận BHYT nội trú
+- Hủy xác nhận BHYT nội trú
+- In mẫu 6556
+- In mẫu 6556 BHYT nội trú
+Row 101: 4 |  | Thu viện phí ngoại trú | - Tìm kiếm 
+- Thanh toán Viện phí ngoại trú
+- In thông tin viện phí ngoại trú
+- Hoàn trả
+Row 102: 5 |  | Thu viện phí nội trú | - Tìm kiếm
+- Thanh toán Viện phí nội trú
+- In thông tin viện phí nội trú
+- Hoàn trả
+Row 103: 6 |  | Khai báo mẫu hóa đơn điện tử | - Thêm mới mẫu hóa đơn điện tử
+- Tìm kiếm mẫu hóa đơn điện tử
+Row 104: 7 |  | Danh sách hóa đơn điện tử (kết nối xuất hóa đơn điện tử được với các nhà cung cấp lớn như VNPT, Viettel,…) | - Tìm kiếm
+- In hoá đơn
+Row 105: 8 |  | Khóa xác nhận chi phí | - Tìm kiếm 
+- Mở khóa xác nhận chi phí
+- Khóa xác nhận chi phí
+Row 106: III.5 | Quản lý cận lâm sàng | Quản lý cận lâm sàng | Quản lý cận lâm sàng
+Row 107: 1 |  | Sổ xét nghiệm | - In báo cáo sổ sinh hóa (14/BV-01)
+- Xuất excel sổ sinh hóa (14/BV-01)
+- In báo cáo sổ huyết học (15/BV-01)
+- Xuất excel sổ huyết học (15/BV-01)
+- In báo cáo sổ xét nghiệm nước tiểu (14/BV-02)
+- Xuất excel sổ xét nghiệm nước tiểu (14/BV-02)
+- In báo cáo sổ xét nghiệm vi sinh (18/BV-01)
+- Xuất excel sổ xét nghiệm vi sinh (18/BV-01)
+Row 108: 2 |  | Danh sách chờ xét nghiệm | - Tìm kiếm danh sách xét nghiệm
+- Sửa kết quả xét nghiệm
+- Xóa kết quả 
+- In mặc định
+- In phiếu xét nghiệm mẫu 28
+- In phiếu xét nghiệm mẫu 33
+- In phiếu xét nghiệm mẫu 34
+Row 109: 3 |  | Đồng bộ thông số | - Tìm kiếm dịch vụ
+- Đồng bộ thông số
+Row 110: 4 |  | Danh mục giá trị chuẩn | - Tìm kiếm giá trị chuẩn
+- Thêm giá trị chuẩn
+- Sửa giá trị chuẩn
+- Xóa giá trị chuẩn
+Row 111: 5 |  | Sổ chẩn đoán hình ảnh | - Tìm kiếm sổ chuẩn đoán hình ảnh (16/BV-01)
+- Xuất excel sổ chuẩn đoán hình ảnh (16/BV-01)
+- Tìm kiếm sổ nội soi (17/BV-01)
+- Xuất excel sổ nội soi (17/BV-01)
+- Tìm kiếm sổ chụp x-quang (16/BV-01-XQ)
+- Xuất excel sổ chụp x-quang (16/BV-01-XQ)
+Row 112: 6 |  | Danh sách chờ Chẩn đoán hình ảnh | - Tìm kiếm danh sách chuẩn đoán hình ảnh
+- Sửa kết quả chuẩn đoán hình ảnh
+- Xóa kết quả
+Row 113: 7 |  | Phiếu trả lời kết quả- In kết quả theo mẫu mặc định | In mặc định
+Row 114: 8 |  | Phiếu trả lời kết quả- In kết quả theo mẫu 19/BV | In mẫu 19/BV
+Row 115: 9 |  | Phiếu trả lời kết quả- In kết quả theo mẫu 23/BV | In mẫu 23/BV
+Row 116: 10 |  | Khai báo mẫu mô tả Kết quả chẩn đoán hình ảnh | - Tìm kiếm mẫu mô tả Kết quả chẩn đoán hình ảnh
+- Thêm mới mẫu mô tả Kết quả chẩn đoán hình ảnh 
+- Sửa mẫu mô tả Kết quả chẩn đoán hình ảnh
+- Xóa mẫu mô tả Kết quả chẩn đoán hình ảnh
+Row 117: IV | Phân hệ Quản lý bệnh không lây nhiễm | Phân hệ Quản lý bệnh không lây nhiễm | Phân hệ Quản lý bệnh không lây nhiễm
+Row 118: 1 |  | Khám bệnh ngoại trú | - Tìm kiếm khám bệnh ngoại trú
+- Hủy xác nhận chi phí
+- Xóa bệnh nhân
+- Xem chi tiết
+Row 119: 2 |  | Hồ sơ khám bệnh | - Xem hồ sơ khác
+- Tiếp đón mới
+- In bảng kê chi phí BHYT 6556
+- In bảng kê chi phí BHYT 6556 gộp thuốc, dịch vụ
+- In mẫu 08 GDYT
+- Phiếu khám bệnh
+- Phiếu vào viện
+- Tờ điều trị
+- Xử trí
+Row 120: 3 |  | Hồ sơ khám bệnh - Chỉ định dịch vụ | - Tìm kiếm dịch vụ
+- Thêm dịch vụ
+- In mặc định
+- In phiếu xét nghiệm mẫu 28/BV
+- In phiếu xét nghiệm mẫu 33/BV
+- In phiếu xét nghiệm mẫu 34/BV
+- Sửa dịch vụ
+- Xóa dịch vụ
+Row 121: 4 |  | Hồ sơ khám bệnh - Kê đơn thuốc | - Tìm kiếm thuốc
+- Thêm thuốc
+- Thêm mới đơn thuốc
+- In theo TT18
+- In theo TT18 có chữ ký bệnh nhân
+- In đơn thuốc N
+- In đơn thuốc H
+- In phiếu phát thuốc
+- Sửa đơn thuốc
+- Xóa đơn thuốc
+Row 122: 5 |  | Hồ sơ khám bệnh - Chuyển viện | - Thêm chuyển viện
+- In giấy chuyển viện
+- Sửa chuyển viện
+- Xóa chuyển viện
+Row 123: 6 |  | Hồ sơ khám bệnh - Cấp giấy nghỉ ốm | - Thêm giấy nghỉ ốm
+- In giấy nghỉ ốm
+- Sửa giấy nghỉ ốm
+- Xóa giấy nghỉ ốm
+Row 124: 7 |  | Hồ sơ khám bệnh - Sổ theo dõi Lao | - Thêm bệnh nhân vào danh sách sổ lao
+- Sửa bệnh nhân trong danh sách sổ lao
+- Xóa bệnh nhân trong danh sách sổ lao
+Row 125: 8 |  | Hồ sơ khám bệnh - Sổ theo dõi Tâm thần | - Thêm bệnh nhân vào danh sách sổ theo dõi Tâm thần
+- Sửa bệnh nhân trong danh sách sổ theo dõi Tâm thần
+- Xóa bệnh nhân trong danh sách sổ theo dõi Tâm thần
+Row 126: 9 |  | Hồ sơ khám bệnh - Đăng ký nhập viện | - Thêm thông tin nhập viện
+- Lưu thông tin nhập viện
+- Sửa thông tin nhập viện
+Row 127: 10 |  | Hồ sơ khám bệnh - Sổ theo dõi bệnh không lây nhiễm | - Thêm bệnh nhân vào danh sách sổ theo dõi bệnh không lây nhiễm
+- Sửa bệnh nhân trong danh sách sổ theo dõi bệnh không lây nhiễm
+- Xóa bệnh nhân trong danh sách theo dõi bệnh không lây nhiễm
+Row 128: 11 |  | Hồ sơ khám bệnh - Bệnh án ngoại trú | - Thêm bệnh án ngoại trú
+- Sửa bệnh án ngoại trú
+- Xóa bệnh án ngoại trú
+Row 129: 12 |  | Hồ sơ khám bệnh - Hồ sơ bệnh án chi tiết | - Lưu thông tin Hồ sơ bệnh án chi tiết
+- In Hồ sơ bệnh án chi tiết
+- In tờ điều trị theo bệnh án
+Row 130: 13 |  | Hồ sơ khám bệnh - Danh sách hồ sơ bệnh án | - Sửa bệnh án ngoại trú
+- Xóa bệnh án ngoại trú
+Row 131: 14 |  | Hồ sơ khám bệnh - Tờ điều trị BN mãn tính | - Thêm mới tờ điều trị bệnh nhân mãn tính
+- In tờ điều trị bệnh nhân mãn tính 
+- Sửa tờ điều trị bệnh nhân mãn tính
+- Xóa tờ điều trị bệnh nhân mãn tính
+- Biểu đồ huyết áp, đường huyết
+- In biểu đồ
+Row 132: 15 |  | Hồ sơ khám bệnh - Dữ liệu hồ sơ y tế điện tử | Hệ thống liên kết với hệ thống Hồ sơ sức khỏe cho phép người dùng xem lịch sử khám từ hệ thống Hồ sơ sức khỏe và các báo cáo liên quan
+Row 133: 16 |  | Hồ sơ khám bệnh - QL diễn biến điều trị | - Thêm mới diễn biến điều trị
+- Sửa diễn biến điều trị
+- Xóa diễn biến điều trị
+Row 134: 17 |  | Hồ sơ khám bệnh - Phiếu chăm sóc | - Thêm mới phiếu chăm sóc
+- In phiếu chăm sóc
+- Sửa phiếu chăm sóc
+- Xóa phiếu chăm sóc
+Row 135: 18 |  | Phiếu truyền oxytocin | - Thêm mới phiếu truyền oxytocin
+- In phiếu truyền oxytocin
+- Sửa phiếu truyền oxytocin
+- Xóa phiếu truyền oxytocin
+Row 136: 19 |  | Phiếu truyền dịch | - Thêm mới phiếu truyền dịch
+- In phiếu truyền dịch
+- Sửa phiếu truyền dịch
+- Xóa dịch truyền
+- Thêm dịch truyền
+- Sửa dịch truyền
+Row 137: 20 |  | Khám sức khỏe lái xe | - Khám sức khỏe bệnh nhân
+- Sửa khám sức khỏe bệnh nhân
+- Xóa khám sức khỏe 
+- Liên thông & ký số
+Row 138: V | Phân hệ Dược phẩm | Phân hệ Dược phẩm | Phân hệ Dược phẩm
+Row 139: 1 |  | Phiếu nhập kho | - Thêm phiếu nhập kho
+- Import phiếu nhập kho
+- Sửa phiếu nhập kho
+- Xóa phiếu nhập kho
+- Tìm kiếm phiếu nhập kho
+- Duyệt phiếu nhập kho
+- In phiếu nhập kho
+Row 140: 2 |  | Cập nhật giá thuốc | Chỉnh sửa thông tin thuốc đã nhập
+Row 141: 3 |  | Biên bản kiểm nhập | - Tạo biên bản kiểm nhập 
+- Tạo biên bản kiểm nhập theo nhà cung cấp
+- Tạo biên bản kiểm nhập theo nhà cung cấp chi tiết
+- In biên bản theo mẫu mặc định
+- In biên bản theo thông tư 22
+Row 142: 4 |  | Biên bản kiểm kê dược | - Tạo biên bản kiểm kê dược theo mẫu có thanh lý
+- Tạo biên bản kiểm kê dược theo mẫu không thanh lý
+- Tạo biên bản kiểm kê theo tháng
+- Tạo biên bản kiểm kê theo năm
+- In biên bản
+Row 143: 5 |  | Xuất thanh lý và sử dụng dược phẩm | - Thêm phiếu xuất thanh lý và sử dụng dược phẩm
+- Sửa phiếu xuất thanh lý và sử dụng dược phẩm
+- Xóa phiếu xuất thanh lý và sử dụng dược phẩm
+- Tìm kiếm phiếu xuất thanh lý và sử dụng dược phẩm
+- Duyệt phiếu xuất thanh lý và sử dụng dược phẩm
+- In biên bản sử dụng
+- In phiếu xuất kho
+Row 144: 6 |  | Xem tồn kho - Báo cáo nhập xuất tồn | - Xem danh sách dược phẩm, vật tư tồn kho
+- Tìm kiếm dược phẩm, vật tư tồn kho
+- In báo cáo nhập – xuất – tồn kho thuốc, vật tư, hàng hóa 
+- Xuất excel báo cáo nhập – xuất – tồn kho thuốc, vật tư, hàng hóa
+Row 145: 7 |  | Xem tồn kho tuyến dưới | - Xem danh sách dược phẩm, vật tư tồn kho tuyến dưới
+- Tìm kiếm dược phẩm, vật tư tồn kho tuyến dưới 
+- In báo cáo tồn kho tuyến dưới mẫu chi tiết theo từng xã
+- In báo cáo tồn kho tuyến dưới mẫu theo mặt hàng theo từng xã
+- In báo cáo tồn kho tuyến dưới mẫu tổng hợp có đơn giá toàn huyện
+- In báo cáo tồn kho tuyến dưới mẫu tổng hợp toàn huyện
+- In báo cáo tồn kho tuyến dưới mẫu theo tình hình KCBBHYT
+- In báo cáo mẫu chi tiết từng xã theo nhóm dược
+- Xuất excel báo cáo tồn kho tuyến dưới
+Row 146: 8 |  | Xem thẻ kho | - Xem danh sách dược phẩm
+- Tìm kiếm dược phẩm
+- In chi tiết dược phẩm
+- In thẻ kho tổng hợp
+Row 147: 9 |  | Xác nhận phát thuốc | - Tìm kiếm bệnh nhân có đơn thuốc
+- Xác nhận phát thuốc
+- Huỷ xác nhận phát thuốc
+Row 148: 10 |  | Báo cáo xuất thuốc theo ngày | - Tìm kiếm báo cáo
+- In báo cáo sử dụng theo ngày
+- In báo cáo xuất dược tổng hợp
+- Xuất báo cáo ra excel
+Row 149: 11 |  | Kiểm tra thuốc | - Thêm mới cấu hình thuốc: báo cáo cảnh báo vượt số lượng thuốc tồn kho, cảnh báo vượt số lượng thuốc đăng ký với BHXH, danh sách thuốc tồn kho dưới mức quy định
+- Sửa thông tin cấu hình
+- Xóa cấu hình
+- Xem thông tin chi tiết cấu hình
+- Tìm kiếm cấu hình thuốc
+- Xem danh sách thuốc sắp hết hạn
+- Xem danh sách thuốc hết hạn sử dụng
+Row 150: 12 |  | Xuất nội bộ dược | - Thêm phiếu xuất nội bộ
+- Sửa phiếu xuất nội bộ
+- Xóa phiếu xuất nội bộ
+- Xem chi tiết phiếu xuất nội bộ
+- Tìm kiếm phiếu xuất nội bộ
+- In phiếu xuất nội bộ
+Row 151: 13 |  | Nhập nội bộ | - Xác nhận phiếu nhập nội bộ
+- Xem chi tiết phiếu nhập nội bộ
+- Tìm kiếm phiếu nhập nội bộ
+- In phiếu nhập nội bộ
+Row 152: 14 |  | Dự trù thuốc | - Thêm phiếu dự trù
+- Sửa phiếu dự trù
+- Xóa phiếu dự trù
+- Tìm kiếm phiếu dự trù
+- In phiếu dự trù
+- In tổng hợp y lệnh
+Row 153: 15 |  | Xuất dược xuống tuyến dưới | - Thêm phiếu xuất dược xuống tuyến dưới
+- Sửa phiếu xuất dược xuống tuyến dưới
+- Xóa phiếu xuất dược xuống tuyến dưới
+- Tìm kiếm phiếu xuất dược xuống tuyến dưới
+- In phiếu xuất dược xuống tuyến dưới
+Row 154: 16 |  | Nhập dược tuyến trên | - Xác nhận nhập dược tuyến trên
+- Tìm kiếm phiếu nhập
+- Xem chi tiết phiếu nhập
+- In phiếu nhập
+Row 155: 17 |  | Duyệt toa thuốc | - Tìm kiếm danh sách bệnh nhân có kê đơn thuốc
+- Xem chi tiết đơn thuốc
+- Xác nhận toa thuốc
+Row 156: 18 |  | Khóa/Mở sổ chứng từ | Khóa/Mở sổ chứng từ
+Row 157: 19 |  | Tính lại số dư đầu kỳ | - Tính số dư đầu kỳ
+- Tính tất cả số dư đầu kỳ
+- Xóa số dư đầu kỳ
+- Xóa tất cả số dư đầu kỳ
+- Tìm kiếm danh sách kho dược
+Row 158: 20 |  | Dự trù tuyến trên | - Thêm dự trù tuyến trên
+- Sửa dự trù tuyến trên
+- Xoá dự trù tuyến trên
+- Gửi dự trù tuyến trên
+- Tìm kiếm phiếu dự trù tuyến trên
+- Xem tồn kho tuyến trên
+Row 159: 21 |  | Nhận dược tuyến trên | - Tìm kiếm phiếu nhận dược
+- Xem chi tiết phiếu 
+- Lấy phiếu nhập
+Row 160: 22 |  | Trả thuốc tuyến trên | - Thêm phiếu trả thuốc tuyến trên
+- Sửa phiếu trả thuốc tuyến trên
+- Xóa phiếu trả thuốc tuyến trên
+- Xem chi tiết phiếu trả thuốc tuyến trên
+- Tìm kiếm phiếu trả thuốc tuyến trên
+- In phiếu trả thuốc tuyến trên
+Row 161: 23 |  | Bán thuốc bệnh nhân | - Thêm đợt bán thuốc bệnh nhân
+- Sửa đợt bán thuốc bệnh nhân
+- Xóa đợt bán thuốc bệnh nhân
+- Xem chi tiết đợt bán thuốc bệnh nhân
+- In phiếu mua thuốc
+- In bảng kê chi tiết bán lẻ khám chữa bệnh
+- Tìm kiếm đợt bán thuốc bệnh nhân
+Row 162: VI | Phân hệ: Báo cáo thống kê | Phân hệ: Báo cáo thống kê | Phân hệ: Báo cáo thống kê
+Row 163: 1 |  | Sổ Khám bệnh (A1/YTCS) | - Xuất excel sổ
+- In sổ
+Row 164: 2 |  | Sổ thực hiện biện pháp Kế hoạch hóa gia đình  (A5.1/YTCS) | - Xuất excel sổ
+- In sổ
+Row 165: 3 |  | Sổ theo dõi, quản lý bệnh nhân Sốt rét (A7/YTCS) | - Xuất excel sổ
+- In sổ
+Row 166: 4 |  | Số theo dõi, quản lý bệnh nhân tâm thần tại cộng đồng ( A8/YTCS) | - Xuất excel sổ
+- In sổ
+Row 167: 5 |  | Sổ theo dõi, quản lý bệnh nhân Lao tại cộng đồng (A9/YTCS) | - Xuất excel sổ
+- In sổ
+Row 168: 6 |  | Sổ theo dõi, quản lý bệnh nhân HIV tại cộng đồng (A10/YTCS) | - Xuất excel sổ
+- In sổ
+Row 169: 7 |  | Sổ theo dõi, quản lý bệnh không lây nhiễm ( A12/YTCS) | - Xuất excel sổ
+- In sổ
+Row 170: 8 |  | Sổ thủ thuật | - Xuất excel sổ
+- In sổ
+Row 171: 9 |  | Báo cáo BHYT | Tổng hợp dữ liệu và hiển thị theo các mẫu báo cáo xuất thuốc, vật tư y tế, báo cáo khám chữa bệnh bệnh nhân ngoại trú, nội trú, thống kê người bệnh có thẻ là QNCA – HD, báo cáo thuốc điều trị HIV,…
+Row 172: 10 |  | Mẫu 19 | - Xuất excel
+- Xuất excel 917
+- Xuất excel 4210
+- In báo cáo
+Row 173: 11 |  | Mẫu 20 | - Xuất excel
+- Xuất excel 917
+- Xuất excel 4210
+- In báo cáo
+Row 174: 12 |  | Mẫu 21 | - Xuất excel
+- Xuất excel 917
+- Xuất excel 4210
+- In báo cáo
+Row 175: 13 |  | Mẫu 20 theo nhóm | - Xuất excel
+- In báo cáo
+Row 176: 14 |  | Mẫu 21 theo nhóm | - Xuất excel
+- In báo cáo
+Row 177: 15 |  | Mẫu 21(CV285) | - Xuất excel
+- In báo cáo
+Row 178: 16 |  | Mẫu 79 (thông tư 102) | - Xuất excel
+- Xuất excel 4210
+- In báo cáo
+Row 179: 17 |  | Mẫu 79 tổng hợp | - Xuất excel
+- In báo cáo
+Row 180: 18 |  | Mẫu 80 tổng hợp | - Xuất excel
+- In báo cáo
+Row 181: 19 |  | Mẫu 14A | - Xuất excel
+- In báo cáo
+Row 182: 20 |  | Mẫu 14A tổng hợp | - Xuất excel
+- In báo cáo
+Row 183: 21 |  | Mẫu 14A trạm y tế | - Xuất excel
+- In báo cáo
+Row 184: 22 |  | Mẫu Trẻ em không thẻ | - Xuất excel
+- In báo cáo
+Row 185: 23 |  | Bảng kê chi tiết | Xung kê ch
+Row 186: 24 |  | Mẫu TK37.1/BHYT | - Xuất excel
+- In báo cáo
+Row 187: 25 |  | Mẫu 192021 theo nhóm | - Xuất excel
+- In báo cáo
+Row 188: 26 |  | Danh sách người bệnh BHYT QNCA – HD | - Xuất excel
+- In báo cáo
+Row 189: 27 |  | Danh sách giấy nghỉ ốm | - Xuất excel
+Row 190: 28 |  | Báo cáo thuốc điều trị HIV | - Xuất excel
+- In báo cáo
+Row 191: 29 |  | Tổng hợp dữ liệu khám chữa bệnh các cấp | Chức năng tổng hợp dữ liệu khám chữa bệnh các cấp cho phép người dùng tổng hợp dữ liệu theo nhiều tiêu chí khác nhau theo từng cấp.
++ Tổng hợp chi phí KCB BHYT
+ + Tổng hợp chi phí KCB BHYT theo CSYT
+ + Tổng hợp dữ liệu KCB
+ + Xuất excel/PDF
+Row 192: 30 |  | Thống kê dữ liệu khám chữa bệnh | Chức năng tổng hợp dữ liệu khám chữa bệnh cho phép người dùng tổng hợp dữ liệu theo nhiều tiêu chí khác nhau.
+ + Tổng hợp bệnh
+ + Thống kê chi phí
+ + Thống kê hoạt động khám chữa bệnh
+ + Tổng hợp thông tin chuyển tuyến
+ + Thống kê dịch vụ sử dụng
+ + Báo cáo công tác chuyển tuyến
+ + In/Xuất excel
+Row 193: 31 |  | Thống kê bệnh KLN | + Thống kê bệnh KLN
++ Xuất excel
+Row 194: 32 |  | Bảng kê thu viện phí | + In bảng kê thu tiền theo biên lai
++ In bảng kê thu tiền theo nhóm dịch vụ
++ Xuất excel bảng kê
+Row 195: 33 |  | Báo cáo tổng hợp | + Báo cáo thống kê bệnh tật
++ Báo cáo hoạt động lâm sàng theo độ tuổi
++ Tình hình sử dụng thuốc theo nhóm tác dụng dược lý
++ Báo cáo tình hình mắc bệnh truyền nhiễm gây dịch
++ Báo cáo danh sách bệnh nhân theo bệnh
++ Hoạt động khám chữa bệnh theo tháng
++ Xuất excel
+Row 196: 34 |  | Báo cáo bệnh nhân các cấp | Cho phép xuất báo cáo bệnh nhân khám chữa bệnh theo các cấp
++ Tổng hợp bệnh nhân
++ Báo cáo bệnh nhân có chi phí KCB lớn nhất
++ Báo cáo bệnh nhân có lượt khám nhiều nhất
++ Xuất excel
+Row 197: 35 |  | Báo cáo tiện ích | + Báo cáo khám bệnh số ngày nghỉ
++ In/Xuất excel
+Row 198: 36 |  | Báo cáo dược phẩm | + Báo cáo sử dụng thuốc
++ Báo cáo sử dụng vật tư y tế tiêu hao
++ Báo cáo xuất dược tuyến dưới
++ Báo cáo xuất sử dụng thuốc, vật tư y tế theo tháng
++ In/xuất excel
+Row 199: 37 |  | Biểu đồ thống kê bệnh KLN | Tìm kiếm
+Xem biểu đồ thống kê
+Row 200: 38 |  | Báo cáo tuyến xã (Biểu 1/BCX 🡪 10/BCX) | Biểu 1/BCX: Đơn vị hành chính, dân số và tình hình sinh tử
+Biểu 2/BCX: Ngân sách trạm y tế
+Biểu 3/BCX: Tình hình nhân lực y tế xã
+Biểu 4/BCX: Hoạt động chăm sóc bà mẹ, trẻ em và KHHGĐ
+Biểu 5/BCX: Hoạt động khám chữa bệnh
+Biểu 6/BCX: Hoạt động tiêm chủng mở rộng
+Biểu 7/BCX: Tình hình mắc và tử vong do tai nạn thương tích
+Biểu 8/BCX: Tình hình mắc và tử vong do bệnh truyền nhiễm gây dịch
+Biểu 9/BCX: Hoạt động phòng chống bệnh xã hội
+Biểu 10/BCX: Báo cáo tình hình tử vong từ cộng đồng
++ Thêm mới báo cáo
+ + Sửa báo cáo
+ + Xóa báo cáo
+ + Gửi tuyến trên
+ + In báo cáo
+ + Xuất excel/PDF
+Row 201: 39 |  | Báo cáo tuyến xã TT37 (Biểu 1/BCX 🡪 8/BCX) | + Báo cáo thông tin chung (Biểu 1/BCX)
+ + Báo cáo tình hình nhân lực Y tế xã (Biểu 2/BCX)
+ + Báo cáo hoạt động chăm sóc bà mẹ và trẻ em (Biểu 3/BCX)
+ + Báo cáo hoạt động khám chữa bệnh (Biểu 4/BCX)
+ + Báo cáo tình hình mắc và tử vong bệnh truyền nhiễm gây dịch (Biểu 5/BCX)
+ + Báo cáo hoạt động phòng chống sốt rét, HIV/AIDS, tai nạn thương tích và sức khỏe tâm thần (Biểu 6/BCX)
+ + Báo cáo hoạt động phát hiện, quản lý điều trị bệnh không lây nhiễm (Biểu 7/BCX)
+ + Báo cáo tình hình tử vong tại cộng đồng (Biểu 8/BCX)
+ + Thêm mới báo cáo
+ + Sửa báo cáo
+ + Xóa báo cáo
+ + Gửi tuyến trên
+ + In báo cáo
+ + Xuất excel/PDF
+Row 202: 40 |  | Báo cáo tuyến huyện (Biểu 1/BCH 🡪 Biểu 16/BCH) | Biểu 1/BCH: Đơn vị hành chính, dân số và tình hình tử vong
+Biểu 2/BCH: Tình hình thu chi ngân sách y tế
+Biểu 3.1/BCH: Cơ sở, giường bệnh và tình hình xử lý chất thải
+Biểu 3.2/BCH: Tình hình y tế xã
+Biểu 4/BCH: Tình hình nhân lực y tế toàn huyện
+Biểu 5.1/BCH: Hoạt động chăm sóc bà mẹ
+Biểu 5.2/BCH: Hoạt động chăm sóc bà mẹ
+Biểu 6/BCH: Tình hình mắc và tử vong do tai biến sản khoa
+Biểu 7/BCH: Hoạt động khám chữa phụ khoa, KHHGĐ và nạo phá thai
+Biểu 8/BCH: Tình hình sức khỏe trẻ em
+Biểu 9/BCH: Hoạt động tiêm chủng phòng 10 bệnh cho trẻ em
+Biểu 10/BCH: Tình hình mắc và tử vong do các bệnh có vắc xin tiêm chủng của trẻ em
+Biểu 11.1/BCH: Hoạt động khám chữa bệnh
+Biểu 11.2/BCH: Hoạt động khám dự phòng, tử vong và cận lâm sàng
+Biểu 12/BCH: Hoạt động phòng chống các bệnh xã hội
+Biểu 13/BCH: Tình hình mắc và tử vong do tai nạn thương tích
+Biểu 14.1/BCH: Tình hình mắc và tử vong bệnh truyền nhiễm gây dịch
+Biểu 14.2/BCH: Tình hình mắc và tử vong bệnh truyền nhiễm gây dịch
+Biểu 14.3/BCH: Tình hình mắc và tử vong bệnh truyền nhiễm gây dịch 
+Biểu 15/BCH: Tình hình bệnh tật và tử vong tại bệnh viện theo ICD10
+Biểu 16/BCH: Báo cáo tình hình tử vong tại cộng đồng
+Row 203: 41 |  | Báo cáo tuyến huyện TT37 (Biểu 1/BCH 🡪 Biểu 14/BCH) | + Báo cáo thông tin chung (Biểu 1/BCH)
+ + Báo cáo Tình hình thu, chi ngân sách y tế (Biểu 2/BCH)
+ + Báo cáo Tình hình nhân lực y tế toàn huyện theo (Biểu 3/BCH)
+ + Báo cáo Hoạt động chăm sóc bà mẹ theo (Biểu 4/BCH)
+ + Báo cáo Tình hình mắc và tử vong do tai biến khoa sản (Biểu 5/BCH)
+ + Báo cáo Hoạt động khám, chữa phụ khoa và sàng lọc ung thư cổ tử cung (Biểu 6/BCX)
+ + Báo cáo Hoạt động KHHGĐ và phá thai theo (Biểu 7/BCH)
+ + Báo cáo Tình hình sức khỏe trẻ em (Biểu 8/BCH)
+ + Báo cáo Cơ sở, giường bệnh và hoạt động khám chữa bệnh (Biểu 9/BCH)
+ + Báo cáo Hoạt động phòng chống sốt rét, HIV/AIDS, TNTT, Lao, Phong và Sức khỏe tâm thần (Biểu 10/BCH)
+ + Báo cáo Tình hình mắc và tử vong bệnh truyền nhiễm gây dịch (Biểu 11/BCH)
+ + Báo cáo Hoạt động phát hiện, quản lý điều trị bệnh không lây nhiễm (Biểu 12/BCH)
+ + Báo cáo Báo cáo tình hình tử vong tại cộng đồng (Biểu 13/BCH)
+ + Báo cáo Tình hình bệnh tật và tử vong tại bệnh viện theo ICD 10 (Biểu 14/BCH)
+ + Thêm mới báo cáo
+ + Sửa báo cáo
+ + Xóa báo cáo
+ + Gửi tuyến trên
+ + In báo cáo/Xuất excel
+Row 204: VII | Phân hệ Quản lý công tác dân số | Phân hệ Quản lý công tác dân số | Phân hệ Quản lý công tác dân số
+Row 205: 1 |  | Quản lý thông tin hộ gia đình | - Tìm kiếm thông tin hộ gia đình
+- In báo cáo thông tin hộ gia đình
+- Xuất file excel thông tin hộ gia đình
+- Thêm mới thông tin hộ gia đình
+- Sửa thông tin hộ gia đình
+- Xóa thông tin hộ gia đình
+- Import hộ khẩu từ excel
+- Thêm nhân khẩu
+- Chuyển nhân khẩu đi
+- Phân công bác sĩ
+Row 206: 2 |  | Quản lý nhân khẩu | - Tìm kiếm nhân khẩu
+- In báo cáo nhân khẩu
+- Xuất file excel nhân khẩu
+- Thêm mới nhân khẩu
+- Sửa nhân khẩu
+- Xóa nhân khẩu
+- Tách nhân khẩu
+- Chuyển nhân khẩu sang hộ khác
+- Chuyển nhân khẩu đi
+Row 207: 3 |  | Quản lý người cao tuổi | Quản lý thông tin người cao tuổi
+Tìm kiếm
+Xuất excel
+Xuất pdf
+In thông tin
+Sửa thông tin
+Xem chi tiết
+Row 208: 4 |  | Quản lý Giấy chứng sinh | - Tìm kiếm thông tin giấy chứng sinh
+- Xuất file excel thông tin giấy chứng sinh
+- Xuất file PDF thông tin giấy chứng sinh
+- Xuất excel/pdf danh sách giấy chứng sinh
+- Thêm mới thông tin giấy chứng sinh
+- Sửa thông tin giấy chứng sinh 
+- Xóa thông tin giấy chứng sinh
+- Xem thông tin giấy chứng sinh
+- Cài đặt hiển thị
+Row 209: 5 |  | Quản lý Giấy chứng tử | - Tìm kiếm thông tin giấy chứng tử
+- Thêm mới thông tin giấy chứng tử
+- Sửa thông tin giấy chứng tử
+- Xóa thông tin giấy chứng tử
+- Xem thông tin giấy chứng tử
+Row 210: VIII | Quản lý bệnh truyền nhiễm | Quản lý bệnh truyền nhiễm | Quản lý bệnh truyền nhiễm
+Row 211: 1 |  | Quản lý thông tin trường hợp bệnh | - Thêm mới trường hợp bệnh
+- Tìm kiếm trường hợp bệnh
+- Xuất excel
+- Xuất pdf
+- Sửa trường hợp bệnh
+- Xem chi tiết trường hợp bệnh
+- Xóa trường hợp bệnh
+- In báo cáo trường hợp bệnh
+- Xuất excel báo cáo trường hợp bệnh
+- Xuất word báo cáo trường hợp bệnh
+Row 212: 2 |  | Cập nhật tiền sử dịch tễ | Xem tiền sử dịch tễ
+Row 213: 3 |  | Cập nhật thông tin điều trị | Cập nhật thông tin điều trị
+Row 214: 4 |  | Quản lý báo cáo tuần | - Tìm kiếm báo cáo tuần
+- Xuất excel báo cáo tuần
+- Thêm mới báo cáo tuần
+- Sửa báo cáo tuần
+- Xóa báo cáo tuần
+- In báo cáo tuần
+- Gửi báo cáo tuần
+- Xem chi tiết báo cáo tuần
+- Tổng hợp báo cáo tuần theo khoảng tuần
+Row 215: 5 |  | Quản lý báo cáo tháng | - Tìm kiếm báo cáo tháng
+- Xuất excel báo cáo tháng
+- In báo cáo tháng
+- Thêm mới báo cáo tháng
+- Sửa báo cáo tháng
+- Xóa báo cáo tháng
+- Xem chi tiết báo cáo tháng
+Row 216: IX | Quản lý chăm sóc sức khỏe sinh sản | Quản lý chăm sóc sức khỏe sinh sản | Quản lý chăm sóc sức khỏe sinh sản
+Row 217: 1 |  | Khám bệnh xã/ phường - Sổ khám thai | - Thêm sổ khám thai
+- Sửa sổ khám thai
+- Xóa sổ khám thai
+Row 218: 2 |  | Khám bệnh xã/ phường - Sổ đẻ | - Thêm sổ đẻ
+- Sửa sổ đẻ
+- Xóa sổ đẻ
+Row 219: 3 |  | Khám bệnh xã/ phường - Sổ Phá thai | - Thêm sổ phá thai
+- Sửa sổ phá thai
+- Xóa sổ phá thai
+Row 220: 4 |  | Sổ Khám thai (A3/YTCS) | - Tìm kiếm sổ khám thai
+- Xuất excel
+- Xuất pdf
+Row 221: 5 |  | Sổ đẻ (A4/YTCS) | - Tìm kiếm sổ đẻ
+- Xuất excel
+- Xuất pdf
+Row 222: 6 |  | Sổ phá thai (A5.2/YTCS) | - Tìm kiếm sổ phá thai
+- Xuất excel
+- Xuất pdf
+Row 223: X | Quản lý phòng, chống HIV/AIDS | Quản lý phòng, chống HIV/AIDS | Quản lý phòng, chống HIV/AIDS
+Row 224: 1 |  | Quản lý người bệnh HIV/AIDS | - Tìm kiếm bệnh nhân HIV
+- Danh sách bệnh án chưa khám bệnh
+- Quản lý thông tin người bệnh HIV/AIDS
+- Quản lý thông tin hồ sơ bệnh án
+- Hủy xác nhận chi phí
+- Xóa bệnh nhân
+Row 225: 2 |  | Hồ sơ bệnh án | - Sửa thông tin hồ sơ bệnh án
+- Chỉ định dịch vụ
+- Kê thuốc
+- Xem danh sách các đợt điều trị
+- Xử trí (Chuyển viện; Đăng ký nhập viện; - Chuyển phòng khám; Điều trị tại xã)
+- Xử trí điều trị (Điều trị ARV, Điều trị lao; - Dự phòng Lao; Cotrimoxazol; PLTMC, Khác)
+Row 226: 3 |  | Tiền sử gia đình liên quan đến HIV | - Thêm mới tiền sử gia đình
+- Xóa tiền sử gia đình
+- Danh sách tiền sử gia đình
+- Sửa thông tin tiền sử
+Row 227: 4 |  | Đợt điều trị ARV của người bệnh HIV/AIDS | - Xem danh sách đợt điều trị
+- Thêm đợt điều trị bệnh 
+- Sửa đợt điều trị
+- Xóa đợt điều trị
+Row 228: 5 |  | Quản lý thông tin trong công tác phòng, chống HIV/AIDS | - Tìm kiếm công tác phòng, chống HIV/AIDS
+- Xuất excel
+- Xuất pdf
+- Thêm hoạt động truyền thông phòng chống HIV/AIDS
+- Sửa hoạt động truyền thông phòng chống HIV/AIDS
+- Xóa hoạt động truyền thông phòng chống HIV/AIDS
+Row 229: 6 |  | Quản lý thông tin về các hoạt động truyền thông | - Tìm kiếm hoạt động truyền thông HIV
+- Xuất excel
+- Xuất pdf
+- Thêm hoạt động truyền thông HIV
+- Sửa hoạt động truyền thông HIV
+- Xóa hoạt động truyền thông HIV
+Row 230: 7 |  | Báo cáo HIV | - Tìm kiếm báo cáo HIV
+- In Danh sách bệnh nhân hỗ trợ đồng chi trả thuốc HIV
+- In Mẫu báo cáo C03 năm
+- In Mẫu báo cáo C03 quý
+- In Báo cáo chỉ số tiến độ
+- In Báo cáo Lao – HIV
+- In Báo cáo bệnh nhân theo phác đồ
+- In Báo cáo MER
+- In Báo cáo duy trì điều trị
+- In Báo cáo bảo hiểm y tế
+- In Báo cáo chỉ số cải thiện chất lượng
+- In Danh sách tích lũy bệnh nhân đã từng đăng ký
+- In Danh sách bệnh nhân ARV hiện đang quản lý
+- In Danh sách bệnh nhân đã kết thúc điều trị
+- In Danh sách bệnh nhân tái khám
+- In Danh sách bệnh nhân muộn khám
+- In Dữ liệu HIV QUAL
+Row 231: 8 |  | Danh mục phác đồ điều trị | - Tìm kiếm phác đồ điều trị
+- Thêm phác đồ điều trị
+- Sửa phác đồ điều trị
+- Sử dụng phác đồ điều trị
+- Ngừng sử dụng phác đồ điều trị
+Row 232: XI | Quản lý tiêm chủng và sử dụng vắc xin phòng bệnh | Quản lý tiêm chủng và sử dụng vắc xin phòng bệnh | Quản lý tiêm chủng và sử dụng vắc xin phòng bệnh
+Row 233: 1 |  | Danh mục Kháng nguyên | - Tìm kiếm kháng nguyên
+- Thêm kháng nguyên
+- Danh sách Vắc xin có chứa thành phần kháng nguyên 
+- Xóa kháng nguyên
+- Sửa kháng nguyên
+- Xuất excel danh sách kháng nguyên
+Row 234: 2 |  | Danh mục Vắc xin | - Tìm kiếm vắc xin
+- Xóa vắc xin
+- Sửa vắc xin
+- Xuất excel danh sách vắc xin
+Row 235: 3 |  | Quản lý đối tượng | - Tìm kiếm đối tương
+- Thêm mới đối tượng
+- In mã vạch
+- Thông tin đối tượng (Thông tin cá nhân; Lịch sử tiêm chủng; Dinh dưỡng; Lịch sử cập nhật đối tượng; Thêm mũi tiêm; Kiểm tra tiêm chủng đầy đủ; Thêm số đo dinh dưỡng; Xem biểu đồ cân nặng, chiều cao)
+- Sửa đối tượng
+- Xóa đối tượng
+Row 236: 4 |  | Quản lý lịch sử tiêm | - Thêm mũi tiêm
+- Thêm nhanh mũi tiêm
+- Kiểm tra tiêm chủng đầy đủ
+- Xem danh sách mũi tiêm
+- Xem thông tin mũi tiêm
+- Cập nhật thông tin phản ứng
+- Cập nhật mũi tiêm
+- Xóa mũi tiêm
+Row 237: 5 |  | Dinh dưỡng | - Thêm số đo dinh dưỡng
+- Xem biểu đồ cân nặng, chiều cao
+Row 238: 6 |  | Kế hoạch tiêm chủng | - Tìm kiếm kế hoạch
+- Lập kế hoạch tiêm trẻ em, phụ nữ
+- Thống kê tin nhắn
+- Xem chi tiết
+- Danh sách hẹn tiêm
+- Xóa kế hoạch tiêm
+- Kết thúc
+- In giấy hẹn tiêm
+- In kế hoạch tiêm
+- In mã vạch hàng loạt
+- Kết quả tiêm
+- Tạo phiếu xuất sử dụng
+- Xóa kết quả tiêm
+Row 239: 7 |  | Nhập cấp phát từ Tiêm chủng Quốc gia | - Tìm kiếm phiếu nhập
+- Thêm mới phiếu nhập cấp phát
+- Xem chi tiết phiếu nhập
+- Sửa phiếu nhập
+- In phiếu nhập
+- Xuất excel/xuất pdf
+- Xóa phiếu nhập
+Row 240: 8 |  | Xuất trả lại từ Tiêm chủng Quốc gia | - Tìm kiếm phiếu xuất trả lại
+- Thêm mới phiếu xuất trả lại
+- Xem chi tiết xuất trả lại
+- Sửa phiếu xuất trả lại
+- In phiếu xuất trả lại
+- Xuất excel/xuất pdf
+- Xóa phiếu xuất trả lại
+Row 241: 9 |  | Xuất hủy Tiêm chủng Quốc gia | - Tìm kiếm phiếu xuất hủy
+- Thêm mới phiếu xuất hủy
+- Xem chi tiết xuất hủy
+- Sửa phiếu xuất hủy
+- In phiếu xuất hủy
+- Xuất excel/xuất pdf
+- Xóa phiếu xuất hủy
+Row 242: 10 |  | Xuất sử dụng Tiêm chủng Quốc Gia | - Tìm kiếm phiếu xuất sử dụng
+- Thêm mới phiếu xuất sử dụng
+- Xem chi tiết xuất sử dụng
+- Sửa phiếu xuất sử dụng
+- In phiếu xuất sử dụng
+- Xuất excel/xuất pdf
+- Xóa phiếu xuất sử dụng
+Row 243: 11 |  | Xuất kiểm định Tiêm chủng Quốc Gia | - Tìm kiếm phiếu xuất kiểm định
+- Thêm mới phiếu xuất kiểm định
+- Xem chi tiết xuất kiểm định
+- Sửa phiếu xuất kiểm định
+- In phiếu xuất kiểm định
+- Xuất excel/xuất pdf
+- Xóa phiếu xuất kiểm định
+Row 244: 12 |  | Báo cáo tiến độ tiêm chủng các vắc xin cơ bản cho trẻ (Mẫu 02-01) | - Xem báo cáo
+- Xuất excel
+- Xuất danh sách
+- Gửi báo cáo
+Row 245: 13 |  | Báo cáo tiêm chủng các vắc xin cơ bản cho trẻ em theo kháng nguyên (Mẫu 02-02) | - Xem báo cáo
+- Xuất excel
+- Xuất danh sách
+Row 246: 14 |  | Báo cáo thực hiện tiêm chủng các vắc xin cơ bản cho trẻ em trong TCMR (Mẫu 02-03) | - Xem báo cáo
+- Xuất excel
+- Xuất danh sách
+- Gửi báo cáo
+Row 247: 15 |  | Báo cáo tiến độ tiêm chủng các vắc xin cho trẻ em > 1 tuổi (Mẫu 03-01) | - Xem báo cáo
+- Xuất excel
+- Xuất danh sách
+- Gửi báo cáo
+Row 248: 16 |  | Báo cáo tiêm chủng vắc xin sởi, rubella, VNNB cho trẻ em theo kháng nguyên (Mẫu 03-02) | - Xem báo cáo
+- Xuất excel
+- Xuất danh sách
+Row 249: 17 |  | Báo cáo thực hiện tiêm chủng vắc xin sởi, rubella, VNNB trong TCMR (Mẫu 03-03) | - Xem báo cáo
+- Xuất excel
+- Xuất danh sách
+- Gửi báo cáo tuyến trên
+Row 250: 18 |  | Báo cáo tiến độ tiêm chủng vắc xin uốn ván cho phụ nữ (Mẫu 04/19-TCMR) | - Xem báo cáo
+- Xuất excel
+- Xuất danh sách
+- Gửi báo cáo
+Row 251: 19 |  | Báo cáo tiêm chủng tại CSYT có phòng sinh | - Xem báo cáo
+- Xuất excel
+- Xuất danh sách
+- Gửi báo cáo
+Row 252: 20 |  | Báo cáo vắc xin | - Xem Báo cáo tình hình stại CSYT có phòng sinh cho phụ nữ 
+- Xuất báo cáo
+Row 253: 21 |  | Báo cáo vắc xin vật tư tiêm chủng và phản ứng sau tiêm | - Xem báo cáo Sử dụng vắc xin trong chương trình TCMR
+- Xuất excel
+Row 254: 22 |  | Báo cáo giám sát Bệnh truyền nhiễm | - Báo cáo các bệnh truyền nhiễm trong TCMR
+- Báo cáo danh sách chết sơ sinh và nghi uốn ván sơ sinh
+- Báo cáo tổng hợp vụ dịch các bệnh trong TCMR
+- Xuất excel báo cáo
+Row 255: 23 |  | Thống kê trẻ theo độ tuổi | Dashboard thống kê trẻ theo độ tuổi
+Row 256: 24 |  | Thống kê lịch tiêm chủng | - Tìm kiếm lịch tiêm chủng
+- Lập kế hoạch tiêm trẻ em, phụ nữ
+Row 257: XII | Quản lý uống vitamin A | Quản lý uống vitamin A | Quản lý uống vitamin A
+Row 258: 1 |  | Kế hoạch uống vitaminA | - Lập kế hoạch uống vitamin A trẻ em, phụ nữ
+- Tìm kiếm kế hoạch uống vitamin A trẻ em, phụ nữ
+- Xóa kế hoạch uống vitamin A trẻ em, phụ nữ
+Row 259: 2 |  | Quản lý thông tin uống Vitamin A | - Tìm kiếm kế hoạch uống vitamin A
+- Xem danh sách chi tiết
+- Xóa kế hoạch
+Row 260: 3 |  | Báo cáo | Xem danh sách uống vitamin A
+Row 261: XIII | Quản lý phòng, chống suy dinh dưỡng | Quản lý phòng, chống suy dinh dưỡng | Quản lý phòng, chống suy dinh dưỡng
+Row 262: 2 |  | Quản lý thông tin dinh dưỡng | - Thêm số đo dinh dưỡng
+- Xem biểu đồ cân nặng, chiều cao
+Row 263: 3 |  | Báo cáo dinh dưỡng | - Tìm kiếm báo cáo
+- Tạo báo cáo
+- Xem chi tiết báo cáo
+- Sửa báo cáo
+- Xóa báo cáo
+- Xuất excel
+- Gửi báo cáo
+Row 264: XIV | Quản lý phòng, chống tai nạn thương tích | Quản lý phòng, chống tai nạn thương tích | Quản lý phòng, chống tai nạn thương tích
+Row 265: 1 |  | Quản lý thông tin tai nạn thương tích | - Thêm tai nạn thương tích
+- Tìm kiếm tai nạn thương tích
+- Xuất file Excel/PDF danh sách tai nạn thương tích
+- Chỉnh sửa tai nạn thương tích
+- In tai nạn thương tích
+- Xóa tai nạn thương tích
+Row 266: XV | Quản lý thông tin tử vong | Quản lý thông tin tử vong | Quản lý thông tin tử vong
+Row 267: 1 |  | Khám bệnh xã/ phường - Sổ theo dõi tử vong | - Thêm sổ theo dõi tử vong
+- Tìm kiếm báo cáo sổ theo dõi tử vong 
+- Xuất báo cáo sổ theo dõi tử vong theo excel/PDF
+Row 268: 2 |  | Sổ theo dõi tử vong (A6/YTCS) | - Xuất excel báo cáo sổ theo dõi tử vong
+- Xuất PDF báo cáo sổ theo dõi tử vong
+Row 269: XVI | Quản lý tài sản, trang thiết bị | Quản lý tài sản, trang thiết bị | Quản lý tài sản, trang thiết bị
+Row 270: 1 |  | Quản lý tài sản, trang thiết bị | - Thêm tài sản
+- Sửa tài sản
+- Xóa tài sản
+- Tìm kiếm tài sản
+- Điều chuyển tài sản
+- Khai giảm tài sản
+Row 271: 2 |  | Khai giảm tài sản | - Thêm biên bản khai giảm tài sản
+- Sửa biên bản khai giảm tài sản
+- Xóa biên bản khai giảm tài sản
+- Tìm kiếm biên bản khai giảm tài sản
+- Xem chi tiết biên bản khai giảm tài sản
+Row 272: 3 |  | Điều chuyển tài sản | Thêm mới phiếu điều chuyển tài sản
+Row 273: 4 |  | Sổ theo dõi tài sản | - Tìm kiếm sổ theo dõi tài sản
+- Sổ theo dõi tài sản cố định, công cụ, dụng cụ tại nơi sử dụng
+- Sổ theo dõi tài sản cố định, công cụ, dụng cụ theo khoa phòng
+Row 274: XVII | Quản lý truyền thông, giáo dục sức khỏe | Quản lý truyền thông, giáo dục sức khỏe | Quản lý truyền thông, giáo dục sức khỏe
+Row 275: 1 |  | Quản lý chương trình chăm sóc sức khỏe | - Tìm kiếm chương trình chăm sóc sức khỏe
+- Thêm mới chương trình chăm sóc sức khỏe
+- Sửa chương trình chăm sóc sức khỏe
+- Xóa chương trình chăm sóc sức khỏe
+- Xuất excel/pdf danh sách chương trình
+Row 276: XVIII | Quản lý vệ sinh môi trường | Quản lý vệ sinh môi trường | Quản lý vệ sinh môi trường
+Row 277: 1 |  | Quản lý công trình vệ sinh/ nguồn nước | - Thêm mới vệ sinh môi trường
+- Sửa thông tin vệ sinh môi trường
+- Xóa thông tin vệ sinh môi trường
+- Tìm kiếm thông tin vệ sinh môi trường
+- Xuất excel/PDF thông tin vệ sinh môi trường
+Row 278: XIX | Quản lý an toàn thực phẩm | Quản lý an toàn thực phẩm | 
+Row 279: 1 |  | Quản lý thông tin cơ sở SXKD thực phẩm | - Thêm mới cơ sở sản xuất kinh doanh thực phẩm
+- Sửa cơ sở sản xuất kinh doanh thực phẩm
+- Xóa cơ sở sản xuất kinh doanh thực phẩm
+- Tìm kiếm cơ sở sản xuất kinh doanh thực phẩm
+- Xem chi tiết cơ sở sản xuất kinh doanh thực phẩm
+- Xuất excel/PDF danh sách cơ sở sản xuất kinh doanh thực phẩm
+Row 280: 2 |  | Quản lý cơ sở vi phạm | - Thêm mới cơ sở vi phạm ATTP
+- Sửa cơ sở vi phạm ATTP
+- Xóa cơ sở vi phạm ATTP
+- Tìm kiếm cơ sở vi phạm ATTP
+- Xem chi tiết cơ sở vi phạm ATTP
+- Xuất excel/PDF danh sách cơ sở vi phạm ATTP
+Row 281: 3 |  | Quản lý ngộ độc thực phẩm | - Tìm kiếm ngộ độc thực phẩm
+- Thêm mới ngộ độc thực phẩm
+- Xuất excel danh sách
+- Xuất PDF
+- In phiếu khai báo ngộ độc thực phẩm
+- In phiếu báo cáo vụ ngộ độc thực phẩm
+Row 282: XX | Quản lý tài chính kế toán | Quản lý tài chính kế toán | Quản lý tài chính kế toán
+Row 283: 1 |  | Quản lý thông tin phiếu thu | - Thêm mới phiếu thu 
+- Sửa phiếu thu 
+- Xóa phiếu thu 
+- Tìm kiếm phiếu thu 
+- Xuất danh sách phiếu thu ra excel/PDF
+Row 284: 2 |  | Quản lý thông tin phiếu chi | - Thêm mới phiếu chi
+- Sửa phiếu chi
+- Xóa phiếu chi
+- Tìm kiếm phiếu chi
+- Xuất danh sách phiếu chi ra excel/PDF
+Row 285: 3 |  | Tính số dư đầu kỳ | - Tìm kiếm số dư đầu kỳ
+- Tính số dư đầu kỳ
+- Xóa số dư đầu kỳ
+Row 286: 4 |  | Tổng hợp tình hình tài chính | Tìm kiếm tình hình tài chính
+Danh sách tình hình tài chính
+Row 287: XXI | Quản lý nhân lực | Quản lý nhân lực | Quản lý nhân lực
+Row 288: 1 |  | Quản lý thông tin nhân lực | - Tìm kiếm thông tin nhân viên
+- Thêm mới nhân viên
+- Sửa thông tin nhân viên
+- Xoá nhân viên
+- Xem chi tiết thông tin nhân viên
+- Ánh xạ liên thông với hệ thống đơn thuốc điện tử
+Row 289: XXII | Liên thông dữ liệu | Liên thông dữ liệu | Liên thông dữ liệu
+Row 290: 1 |  | Liên thông dữ liệu với Cổng BHYT | + Danh sách hồ sơ liên thông
++ Tải hồ sơ
+ + Cấu hình tài khoản liên thông
+ + Đồng bộ hồ sơ
+Row 291: 2 |  | Liên thông dữ liệu với Hệ thống Hồ sơ sức khỏe | + Theo dõi liên thông hồ sơ y tế điện tử
+ + Báo cáo thống kê liên thông HSYTĐT
++ API lấy định danh
+ + API liên thông dữ liệu
+ + Tiến trình liên thông dữ liệu tự động
+Row 292: 3 |  | Liên thông dữ liệu với Hệ thống V20 | + Liên thông dữ liệu nhân lực Y tế
+ + Liên thông dữ liệu khám chữa bệnh
+ + Liên thông dữ liệu thuốc, vật tư y tế
+ + Liên thông dữ liệu tiêm chủng
+ + Liên thông dữ liệu bệnh truyền nhiễm
+ + Liên thông dữ liệu bệnh không lây nhiễm
+ + Liên thông dữ liệu An toàn thực phẩm
+ + Liên thông dữ liệu quản lý phòng, chống tai nạn thương tích
+ + Liên thông dữ liệu Lao
+ + Liên thông dữ liệu Tâm thần
+ + Liên thông dữ liệu HIV
+ + Liên thông dữ liệu dân số (sẵn sàng triển khai đồng bộ thông tin người dân với cơ sở dữ liệu về dân cư theo yêu cầu)
+ + Cấu hình tài khoản liên thông

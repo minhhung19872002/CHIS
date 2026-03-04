@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  chis-sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: chis-sqlserver
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=ChisDocker2024Pass#
+      - MSSQL_COLLATION=Vietnamese_CI_AS
+    ports:
+      - "1434:1433"
+    volumes:
+      - chis-sqldata:/var/opt/mssql
+    restart: unless-stopped
+
+  chis-redis:
+    image: redis:7-alpine
+    container_name: chis-redis
+    ports:
+      - "6380:6379"
+    restart: unless-stopped
+
+volumes:
+  chis-sqldata:
