@@ -1,28 +1,28 @@
 import { useState, useEffect, useCallback } from 'react';
-import { Card, Table, Button, Spin, message, Modal, Tabs, Input, Space, Form, Row, Col, InputNumber, Switch } from 'antd';
+import { Card, Table, Button, Spin, message, Modal, Tabs, Input, Space, Form, Row, Col, InputNumber, Switch, Popconfirm } from 'antd';
 import { PlusOutlined, ReloadOutlined, SearchOutlined, EditOutlined, DeleteOutlined } from '@ant-design/icons';
 import type { ColumnsType } from 'antd/es/table';
 import { systemApi } from '../api/system';
 import type { CatalogItemDto } from '../api/system';
 
 const CATEGORIES = [
-  { key: 'staff', label: 'Can bo' },
-  { key: 'medicines', label: 'Thuoc' },
-  { key: 'supplies', label: 'Vat tu' },
-  { key: 'services', label: 'Dich vu' },
-  { key: 'departments', label: 'Khoa/Phong' },
-  { key: 'suppliers', label: 'Nha cung cap' },
-  { key: 'equipment-types', label: 'Loai thiet bi' },
-  { key: 'beds', label: 'Giuong benh' },
-  { key: 'collaborators', label: 'CTV suc khoe' },
-  { key: 'icd', label: 'Ma ICD-10' },
+  { key: 'staff', label: 'Cán bộ' },
+  { key: 'medicines', label: 'Thuốc' },
+  { key: 'supplies', label: 'Vật tư' },
+  { key: 'services', label: 'Dịch vụ' },
+  { key: 'departments', label: 'Khoa/Phòng' },
+  { key: 'suppliers', label: 'Nhà cung cấp' },
+  { key: 'equipment-types', label: 'Loại thiết bị' },
+  { key: 'beds', label: 'Giường bệnh' },
+  { key: 'collaborators', label: 'CTV sức khỏe' },
+  { key: 'icd', label: 'Mã ICD-10' },
   { key: 'vaccines', label: 'Vaccine' },
-  { key: 'prescription-templates', label: 'Mau don thuoc' },
-  { key: 'service-pricing', label: 'Bang gia DV' },
-  { key: 'insurance-policies', label: 'Chinh sach BHYT' },
-  { key: 'wards', label: 'Xa/Phuong' },
-  { key: 'ethnic-groups', label: 'Dan toc' },
-  { key: 'occupations', label: 'Nghe nghiep' },
+  { key: 'prescription-templates', label: 'Mẫu đơn thuốc' },
+  { key: 'service-pricing', label: 'Bảng giá DV' },
+  { key: 'insurance-policies', label: 'Chính sách BHYT' },
+  { key: 'wards', label: 'Xã/Phường' },
+  { key: 'ethnic-groups', label: 'Dân tộc' },
+  { key: 'occupations', label: 'Nghề nghiệp' },
 ];
 
 export default function MasterData() {
@@ -57,21 +57,21 @@ export default function MasterData() {
       };
       if (editing) {
         await systemApi.updateCatalogItem(activeCategory, editing.id, data);
-        message.success('Cap nhat thanh cong');
+        message.success('Cập nhật thành công');
       } else {
         await systemApi.createCatalogItem(activeCategory, data);
-        message.success('Them thanh cong');
+        message.success('Thêm thành công');
       }
       setModal(false); form.resetFields(); setEditing(null); fetchItems();
-    } catch { message.warning('Loi luu'); }
+    } catch { message.warning('Lỗi lưu dữ liệu'); }
   };
 
   const handleDelete = async (id: string) => {
     try {
       await systemApi.deleteCatalogItem(activeCategory, id);
-      message.success('Xoa thanh cong');
+      message.success('Xóa thành công');
       fetchItems();
-    } catch { message.warning('Loi xoa'); }
+    } catch { message.warning('Lỗi xóa'); }
   };
 
   const handleEdit = (record: CatalogItemDto) => {
@@ -81,16 +81,18 @@ export default function MasterData() {
   };
 
   const columns: ColumnsType<CatalogItemDto> = [
-    { title: 'Ma', dataIndex: 'code', width: 100 },
-    { title: 'Ten', dataIndex: 'name' },
-    { title: 'Thu tu', dataIndex: 'sortOrder', width: 70 },
-    { title: 'Hoat dong', dataIndex: 'isActive', width: 80, render: (v: boolean) => <Switch checked={v} size="small" disabled /> },
+    { title: 'Mã', dataIndex: 'code', width: 100 },
+    { title: 'Tên', dataIndex: 'name' },
+    { title: 'Thứ tự', dataIndex: 'sortOrder', width: 70, align: 'right' },
+    { title: 'Hoạt động', dataIndex: 'isActive', width: 80, render: (v: boolean) => <Switch checked={v} size="small" disabled /> },
     {
-      title: '', width: 100,
+      title: '', width: 80,
       render: (_: unknown, r: CatalogItemDto) => (
-        <Space>
+        <Space size="small">
           <Button size="small" icon={<EditOutlined />} onClick={() => handleEdit(r)} />
-          <Button size="small" danger icon={<DeleteOutlined />} onClick={() => handleDelete(r.id)} />
+          <Popconfirm title="Xóa mục này?" onConfirm={() => handleDelete(r.id)} okText="Xóa" cancelText="Hủy">
+            <Button size="small" danger icon={<DeleteOutlined />} />
+          </Popconfirm>
         </Space>
       ),
     },
@@ -98,7 +100,7 @@ export default function MasterData() {
 
   return (
     <Spin spinning={loading}>
-      <Card title="Danh muc du lieu" size="small">
+      <Card title="Danh mục dữ liệu" size="small">
         <Tabs
           tabPlacement="left"
           activeKey={activeCategory}
@@ -109,8 +111,8 @@ export default function MasterData() {
             children: (
               <div>
                 <Space style={{ marginBottom: 12 }}>
-                  <Input placeholder="Tim kiem..." prefix={<SearchOutlined />} value={keyword} onChange={e => setKeyword(e.target.value)} onPressEnter={() => fetchItems()} style={{ width: 220 }} />
-                  <Button type="primary" icon={<PlusOutlined />} onClick={() => { setEditing(null); form.resetFields(); form.setFieldsValue({ isActive: true }); setModal(true); }}>Them moi</Button>
+                  <Input placeholder="Tìm kiếm..." prefix={<SearchOutlined />} value={keyword} onChange={e => setKeyword(e.target.value)} onPressEnter={() => fetchItems()} style={{ width: 220 }} allowClear />
+                  <Button type="primary" icon={<PlusOutlined />} onClick={() => { setEditing(null); form.resetFields(); form.setFieldsValue({ isActive: true }); setModal(true); }}>Thêm mới</Button>
                   <Button icon={<ReloadOutlined />} onClick={fetchItems} />
                 </Space>
                 <Table columns={columns} dataSource={items} rowKey="id" size="small" pagination={{ total, pageSize: 50 }} scroll={{ x: 500 }} />
@@ -120,15 +122,15 @@ export default function MasterData() {
         />
       </Card>
 
-      <Modal title={editing ? 'Sua danh muc' : 'Them danh muc'} open={modal} onCancel={() => setModal(false)} onOk={() => form.submit()} okText="Luu">
+      <Modal title={editing ? 'Sửa danh mục' : 'Thêm danh mục'} open={modal} onCancel={() => setModal(false)} onOk={() => form.submit()} okText="Lưu" cancelText="Hủy">
         <Form form={form} layout="vertical" onFinish={handleSave}>
           <Row gutter={12}>
-            <Col span={8}><Form.Item name="code" label="Ma" rules={[{ required: true }]}><Input /></Form.Item></Col>
-            <Col span={16}><Form.Item name="name" label="Ten" rules={[{ required: true }]}><Input /></Form.Item></Col>
+            <Col span={8}><Form.Item name="code" label="Mã" rules={[{ required: true, message: 'Nhập mã' }]}><Input /></Form.Item></Col>
+            <Col span={16}><Form.Item name="name" label="Tên" rules={[{ required: true, message: 'Nhập tên' }]}><Input /></Form.Item></Col>
           </Row>
           <Row gutter={12}>
-            <Col span={12}><Form.Item name="sortOrder" label="Thu tu"><InputNumber style={{ width: '100%' }} min={0} /></Form.Item></Col>
-            <Col span={12}><Form.Item name="isActive" label="Hoat dong" valuePropName="checked"><Switch /></Form.Item></Col>
+            <Col span={12}><Form.Item name="sortOrder" label="Thứ tự"><InputNumber style={{ width: '100%' }} min={0} /></Form.Item></Col>
+            <Col span={12}><Form.Item name="isActive" label="Hoạt động" valuePropName="checked"><Switch /></Form.Item></Col>
           </Row>
         </Form>
       </Modal>

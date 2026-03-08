@@ -13,20 +13,17 @@ export default function Radiology() {
   const [selected, setSelected] = useState<RadiologyOrderDto | null>(null);
   const [resultModal, setResultModal] = useState(false);
   const [statusFilter, setStatusFilter] = useState<number | undefined>(undefined);
+  const [keyword, setKeyword] = useState('');
   const [resultForm] = Form.useForm();
 
   const fetchOrders = useCallback(async () => {
     setLoading(true);
     try {
-      const res = await radiologyApi.getOrders({ status: statusFilter, pageSize: 30 });
+      const res = await radiologyApi.getOrders({ keyword, status: statusFilter, pageSize: 30 });
       setOrders(res.data.items);
       setTotal(res.data.total);
-    } catch {
-      setOrders([]);
-    } finally {
-      setLoading(false);
-    }
-  }, [statusFilter]);
+    } catch { setOrders([]); } finally { setLoading(false); }
+  }, [statusFilter, keyword]);
 
   useEffect(() => { fetchOrders(); }, [fetchOrders]);
 
@@ -34,41 +31,37 @@ export default function Radiology() {
     if (!selected) return;
     try {
       await radiologyApi.enterResult(selected.id, values);
-      message.success('Nhap ket qua thanh cong');
+      message.success('Nhập kết quả thành công');
       setResultModal(false);
       fetchOrders();
-    } catch {
-      message.warning('Loi nhap ket qua');
-    }
+    } catch { message.warning('Lỗi nhập kết quả'); }
   };
 
   const handleApprove = async (id: string) => {
     try {
       await radiologyApi.approve(id);
-      message.success('Duyet ket qua thanh cong');
+      message.success('Duyệt kết quả thành công');
       fetchOrders();
-    } catch {
-      message.warning('Loi duyet');
-    }
+    } catch { message.warning('Lỗi duyệt'); }
   };
 
   const columns: ColumnsType<RadiologyOrderDto> = [
-    { title: 'Ho ten', dataIndex: 'patientName', width: 150 },
-    { title: 'Loai', dataIndex: 'modality', width: 80 },
-    { title: 'Bo phan', dataIndex: 'bodyPart', width: 120 },
-    { title: 'Ngay', dataIndex: 'orderDate', width: 100, render: (v: string) => dayjs(v).format('DD/MM/YYYY') },
-    { title: 'BS chi dinh', dataIndex: 'doctorName', width: 120 },
+    { title: 'Họ tên', dataIndex: 'patientName', width: 150 },
+    { title: 'Loại', dataIndex: 'modality', width: 80 },
+    { title: 'Bộ phận', dataIndex: 'bodyPart', width: 120 },
+    { title: 'Ngày', dataIndex: 'orderDate', width: 100, render: (v: string) => dayjs(v).format('DD/MM/YYYY') },
+    { title: 'BS chỉ định', dataIndex: 'doctorName', width: 120 },
     {
-      title: 'Trang thai', dataIndex: 'status', width: 100,
-      render: (v: number) => v === 0 ? <Tag color="orange">Cho</Tag> : v === 1 ? <Tag color="blue">Co KQ</Tag> : <Tag color="green">Da duyet</Tag>,
+      title: 'Trạng thái', dataIndex: 'status', width: 100,
+      render: (v: number) => v === 0 ? <Tag color="orange">Chờ</Tag> : v === 1 ? <Tag color="blue">Có KQ</Tag> : <Tag color="green">Đã duyệt</Tag>,
     },
     {
       title: '', width: 200,
       render: (_: unknown, r: RadiologyOrderDto) => (
         <Space>
-          <Button size="small" onClick={() => setSelected(r)}>Chi tiet</Button>
-          {r.status === 0 && <Button size="small" type="primary" onClick={() => { setSelected(r); resultForm.resetFields(); setResultModal(true); }}>Nhap KQ</Button>}
-          {r.status === 1 && <Button size="small" type="primary" icon={<CheckCircleOutlined />} onClick={() => handleApprove(r.id)}>Duyet</Button>}
+          <Button size="small" onClick={() => setSelected(r)}>Chi tiết</Button>
+          {r.status === 0 && <Button size="small" type="primary" onClick={() => { setSelected(r); resultForm.resetFields(); setResultModal(true); }}>Nhập KQ</Button>}
+          {r.status === 1 && <Button size="small" type="primary" icon={<CheckCircleOutlined />} onClick={() => handleApprove(r.id)}>Duyệt</Button>}
         </Space>
       ),
     },
@@ -78,51 +71,52 @@ export default function Radiology() {
     <Spin spinning={loading}>
       <Tabs items={[
         {
-          key: 'orders', label: 'Phieu CDHA',
+          key: 'orders', label: 'Phiếu CĐHA',
           children: (
             <Card>
               <Space style={{ marginBottom: 16 }}>
-                <Input placeholder="Tim kiem..." prefix={<SearchOutlined />} style={{ width: 200 }} />
-                <Select placeholder="Trang thai" allowClear style={{ width: 140 }} value={statusFilter} onChange={setStatusFilter}
-                  options={[{ value: 0, label: 'Cho' }, { value: 1, label: 'Co KQ' }, { value: 2, label: 'Da duyet' }]}
+                <Input placeholder="Tìm kiếm..." prefix={<SearchOutlined />} value={keyword} onChange={e => setKeyword(e.target.value)} onPressEnter={() => fetchOrders()} style={{ width: 200 }} allowClear />
+                <Select placeholder="Trạng thái" allowClear style={{ width: 140 }} value={statusFilter} onChange={setStatusFilter}
+                  options={[{ value: 0, label: 'Chờ' }, { value: 1, label: 'Có KQ' }, { value: 2, label: 'Đã duyệt' }]}
                 />
-                <Select placeholder="Loai" allowClear style={{ width: 120 }}
-                  options={[{ value: 'XQ', label: 'X-Quang' }, { value: 'SA', label: 'Sieu am' }, { value: 'CT', label: 'CT' }]}
+                <Select placeholder="Loại" allowClear style={{ width: 120 }}
+                  options={[{ value: 'XQ', label: 'X-Quang' }, { value: 'SA', label: 'Siêu âm' }, { value: 'CT', label: 'CT' }]}
                 />
                 <Button icon={<ReloadOutlined />} onClick={fetchOrders} />
               </Space>
               <Table columns={columns} dataSource={orders} rowKey="id" size="small" pagination={{ total, pageSize: 30 }} scroll={{ x: 870 }} />
 
               {selected && !resultModal && (
-                <Card size="small" title={`Ket qua - ${selected.patientName}`} style={{ marginTop: 16 }}>
-                  <p><strong>Loai:</strong> {selected.modality} - {selected.bodyPart}</p>
-                  <p><strong>Thong tin lam sang:</strong> {selected.clinicalInfo}</p>
-                  {selected.result && <p><strong>Mo ta:</strong> {selected.result}</p>}
-                  {selected.conclusion && <p><strong>Ket luan:</strong> {selected.conclusion}</p>}
-                  {selected.reportDoctorName && <p><strong>BS doc KQ:</strong> {selected.reportDoctorName}</p>}
+                <Card size="small" title={`Kết quả - ${selected.patientName}`} style={{ marginTop: 16 }}>
+                  <p><strong>Loại:</strong> {selected.modality} - {selected.bodyPart}</p>
+                  <p><strong>Thông tin lâm sàng:</strong> {selected.clinicalInfo}</p>
+                  {selected.result && <p><strong>Mô tả:</strong> {selected.result}</p>}
+                  {selected.conclusion && <p><strong>Kết luận:</strong> {selected.conclusion}</p>}
+                  {selected.reportDoctorName && <p><strong>BS đọc KQ:</strong> {selected.reportDoctorName}</p>}
                 </Card>
               )}
             </Card>
           ),
         },
         {
-          key: 'report', label: 'Bao cao',
+          key: 'report', label: 'Báo cáo',
           children: (
-            <Card title="Bao cao CDHA">
-              <DatePicker.RangePicker format="DD/MM/YYYY" style={{ marginBottom: 16 }} />
-              <br />
-              <Button type="primary">Xuat bao cao</Button>
+            <Card title="Báo cáo CĐHA">
+              <Space>
+                <DatePicker.RangePicker format="DD/MM/YYYY" />
+                <Button type="primary">Xuất báo cáo</Button>
+              </Space>
             </Card>
           ),
         },
       ]} />
 
-      <Modal title="Nhap ket qua CDHA" open={resultModal} onCancel={() => setResultModal(false)} onOk={() => resultForm.submit()} okText="Luu" width={600}>
+      <Modal title="Nhập kết quả CĐHA" open={resultModal} onCancel={() => setResultModal(false)} onOk={() => resultForm.submit()} okText="Lưu" cancelText="Hủy" width={600}>
         <Form form={resultForm} layout="vertical" onFinish={handleEnterResult}>
-          <Form.Item name="result" label="Mo ta hinh anh" rules={[{ required: true }]}>
+          <Form.Item name="result" label="Mô tả hình ảnh" rules={[{ required: true, message: 'Nhập mô tả' }]}>
             <Input.TextArea rows={4} />
           </Form.Item>
-          <Form.Item name="conclusion" label="Ket luan" rules={[{ required: true }]}>
+          <Form.Item name="conclusion" label="Kết luận" rules={[{ required: true, message: 'Nhập kết luận' }]}>
             <Input.TextArea rows={3} />
           </Form.Item>
         </Form>

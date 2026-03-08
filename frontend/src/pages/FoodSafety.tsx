@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
-import { Card, Table, Button, Tag, Spin, message, Modal, Tabs, Input, Space, Form, Row, Col, DatePicker, Select, InputNumber } from 'antd';
-import { PlusOutlined, ReloadOutlined, SearchOutlined } from '@ant-design/icons';
+import { Card, Table, Button, Tag, Spin, message, Modal, Tabs, Input, Space, Form, Row, Col, DatePicker, Select, InputNumber, Popconfirm } from 'antd';
+import { PlusOutlined, ReloadOutlined, SearchOutlined, EditOutlined, DeleteOutlined } from '@ant-design/icons';
 import type { ColumnsType } from 'antd/es/table';
 import dayjs from 'dayjs';
 import { foodSafetyApi } from '../api/foodSafety';
@@ -14,6 +14,7 @@ export default function FoodSafety() {
   const [keyword, setKeyword] = useState('');
   const [businessModal, setBusinessModal] = useState(false);
   const [poisoningModal, setPoisoningModal] = useState(false);
+  const [editingBusiness, setEditingBusiness] = useState<FoodBusinessDto | null>(null);
   const [businessForm] = Form.useForm();
   const [poisoningForm] = Form.useForm();
 
@@ -21,20 +22,33 @@ export default function FoodSafety() {
     setLoading(true);
     try { const res = await foodSafetyApi.getBusinesses({ keyword, pageSize: 30 }); setBusinesses(res.data.items); setBTotal(res.data.total); } catch { setBusinesses([]); } finally { setLoading(false); }
   }, [keyword]);
+
   const fetchPoisonings = useCallback(async () => {
     try { const res = await foodSafetyApi.getPoisoningIncidents({ year: dayjs().year() }); setPoisonings(res.data.items); } catch { setPoisonings([]); }
   }, []);
+
   useEffect(() => { fetchBusinesses(); fetchPoisonings(); }, [fetchBusinesses, fetchPoisonings]);
 
-  const handleCreateBusiness = async (values: Record<string, unknown>) => {
+  const handleSaveBusiness = async (values: Record<string, unknown>) => {
     try {
-      await foodSafetyApi.createBusiness({
+      const data = {
         name: values.name as string, address: values.address as string,
         ownerName: values.ownerName as string, phoneNumber: values.phoneNumber as string,
         businessType: values.businessType as string,
-      });
-      message.success('Them co so thanh cong'); setBusinessModal(false); businessForm.resetFields(); fetchBusinesses();
-    } catch { message.warning('Loi them'); }
+      };
+      if (editingBusiness) {
+        await foodSafetyApi.updateBusiness(editingBusiness.id, data);
+        message.success('Cập nhật thành công');
+      } else {
+        await foodSafetyApi.createBusiness(data);
+        message.success('Thêm cơ sở thành công');
+      }
+      setBusinessModal(false); businessForm.resetFields(); setEditingBusiness(null); fetchBusinesses();
+    } catch { message.warning('Lỗi lưu dữ liệu'); }
+  };
+
+  const handleDeleteBusiness = async (id: string) => {
+    try { await foodSafetyApi.deleteBusiness(id); message.success('Xóa thành công'); fetchBusinesses(); } catch { message.warning('Lỗi xóa'); }
   };
 
   const handleReportPoisoning = async (values: Record<string, unknown>) => {
@@ -45,77 +59,109 @@ export default function FoodSafety() {
         hospitalizedCount: values.hospitalizedCount as number, suspectedFood: values.suspectedFood as string,
         source: values.source as string, reportedBy: values.reportedBy as string,
       });
-      message.success('Bao cao thanh cong'); setPoisoningModal(false); poisoningForm.resetFields(); fetchPoisonings();
-    } catch { message.warning('Loi bao cao'); }
+      message.success('Báo cáo thành công'); setPoisoningModal(false); poisoningForm.resetFields(); fetchPoisonings();
+    } catch { message.warning('Lỗi báo cáo'); }
   };
 
   const businessColumns: ColumnsType<FoodBusinessDto> = [
-    { title: 'Ten co so', dataIndex: 'name', width: 180 },
-    { title: 'Dia chi', dataIndex: 'address', width: 180 },
-    { title: 'Chu co so', dataIndex: 'ownerName', width: 120 },
-    { title: 'Loai', dataIndex: 'businessType', width: 100 },
-    { title: 'Giay phep', dataIndex: 'licenseNumber', width: 100 },
-    { title: 'Kiem tra cuoi', dataIndex: 'lastInspectionDate', width: 100, render: (v: string) => v ? dayjs(v).format('DD/MM/YYYY') : '' },
-    { title: 'Trang thai', dataIndex: 'status', width: 80, render: (v: number) => v === 1 ? <Tag color="green">HD</Tag> : <Tag color="red">Dinh chi</Tag> },
+    { title: 'Tên cơ sở', dataIndex: 'name', width: 180 },
+    { title: 'Địa chỉ', dataIndex: 'address', width: 180 },
+    { title: 'Chủ cơ sở', dataIndex: 'ownerName', width: 120 },
+    { title: 'Loại', dataIndex: 'businessType', width: 100 },
+    { title: 'Giấy phép', dataIndex: 'licenseNumber', width: 100 },
+    { title: 'Kiểm tra cuối', dataIndex: 'lastInspectionDate', width: 100, render: (v: string) => v ? dayjs(v).format('DD/MM/YYYY') : '' },
+    { title: 'Trạng thái', dataIndex: 'status', width: 90, render: (v: number) => v === 1 ? <Tag color="green">Hoạt động</Tag> : <Tag color="red">Đình chỉ</Tag> },
+    {
+      title: '', width: 80, fixed: 'right',
+      render: (_: unknown, r: FoodBusinessDto) => (
+        <Space size="small">
+          <Button size="small" icon={<EditOutlined />} onClick={() => { setEditingBusiness(r); businessForm.setFieldsValue(r); setBusinessModal(true); }} />
+          <Popconfirm title="Xóa cơ sở này?" onConfirm={() => handleDeleteBusiness(r.id)} okText="Xóa" cancelText="Hủy">
+            <Button size="small" danger icon={<DeleteOutlined />} />
+          </Popconfirm>
+        </Space>
+      ),
+    },
+  ];
+
+  const poisoningColumns: ColumnsType<FoodPoisoningDto> = [
+    { title: 'Ngày', dataIndex: 'incidentDate', width: 100, render: (v: string) => dayjs(v).format('DD/MM/YYYY') },
+    { title: 'Địa điểm', dataIndex: 'location', width: 150 },
+    { title: 'Số mắc', dataIndex: 'affectedCount', width: 70, align: 'right' },
+    { title: 'Nhập viện', dataIndex: 'hospitalizedCount', width: 75, align: 'right' },
+    { title: 'Thực phẩm nghi ngờ', dataIndex: 'suspectedFood', width: 150 },
+    { title: 'Nguồn', dataIndex: 'source', width: 120 },
+    { title: 'Trạng thái', dataIndex: 'status', width: 100, render: (v: string) => <Tag color={v === 'resolved' ? 'green' : 'orange'}>{v === 'resolved' ? 'Đã xử lý' : 'Đang xử lý'}</Tag> },
   ];
 
   return (
     <Spin spinning={loading}>
       <Tabs items={[
         {
-          key: 'businesses', label: 'Co so ATTP',
+          key: 'businesses', label: 'Cơ sở ATTP',
           children: (
-            <Card extra={<Space>
-              <Input placeholder="Tim kiem..." prefix={<SearchOutlined />} value={keyword} onChange={e => setKeyword(e.target.value)} onPressEnter={() => fetchBusinesses()} style={{ width: 200 }} />
-              <Button type="primary" icon={<PlusOutlined />} onClick={() => { businessForm.resetFields(); setBusinessModal(true); }}>Them</Button><Button icon={<ReloadOutlined />} onClick={fetchBusinesses} />
-            </Space>}>
-              <Table columns={businessColumns} dataSource={businesses} rowKey="id" size="small" pagination={{ total: bTotal, pageSize: 30 }} scroll={{ x: 860 }} />
+            <Card extra={
+              <Space>
+                <Input placeholder="Tìm kiếm..." prefix={<SearchOutlined />} value={keyword} onChange={e => setKeyword(e.target.value)} onPressEnter={() => fetchBusinesses()} style={{ width: 200 }} allowClear />
+                <Button type="primary" icon={<PlusOutlined />} onClick={() => { setEditingBusiness(null); businessForm.resetFields(); setBusinessModal(true); }}>Thêm</Button>
+                <Button icon={<ReloadOutlined />} onClick={fetchBusinesses} />
+              </Space>
+            }>
+              <Table columns={businessColumns} dataSource={businesses} rowKey="id" size="small" pagination={{ total: bTotal, pageSize: 30 }} scroll={{ x: 1050 }} />
             </Card>
           ),
         },
         {
-          key: 'poisoning', label: 'Ngo doc thuc pham',
+          key: 'poisoning', label: 'Ngộ độc thực phẩm',
           children: (
-            <Card extra={<Button type="primary" icon={<PlusOutlined />} onClick={() => { poisoningForm.resetFields(); setPoisoningModal(true); }}>Bao cao</Button>}>
-              <Table dataSource={poisonings} rowKey="id" size="small" pagination={{ pageSize: 20 }} columns={[
-                { title: 'Ngay', dataIndex: 'incidentDate', width: 100, render: (v: string) => dayjs(v).format('DD/MM/YYYY') },
-                { title: 'Dia diem', dataIndex: 'location', width: 150 },
-                { title: 'Anh huong', dataIndex: 'affectedCount', width: 70 },
-                { title: 'Nhap vien', dataIndex: 'hospitalizedCount', width: 70 },
-                { title: 'Thuc pham nghi ngo', dataIndex: 'suspectedFood', width: 150 },
-                { title: 'Nguon', dataIndex: 'source', width: 120 },
-                { title: 'Trang thai', dataIndex: 'status', width: 90, render: (v: string) => <Tag color={v === 'resolved' ? 'green' : 'orange'}>{v}</Tag> },
-              ]} />
+            <Card extra={
+              <Space>
+                <Button type="primary" icon={<PlusOutlined />} onClick={() => { poisoningForm.resetFields(); setPoisoningModal(true); }}>Báo cáo</Button>
+                <Button icon={<ReloadOutlined />} onClick={fetchPoisonings} />
+              </Space>
+            }>
+              <Table columns={poisoningColumns} dataSource={poisonings} rowKey="id" size="small" pagination={{ pageSize: 20 }} />
+            </Card>
+          ),
+        },
+        {
+          key: 'reports', label: 'Báo cáo',
+          children: (
+            <Card title="Báo cáo an toàn thực phẩm">
+              <Space>
+                <DatePicker picker="year" placeholder="Chọn năm" />
+                <Button type="primary">Xuất báo cáo</Button>
+              </Space>
             </Card>
           ),
         },
       ]} />
 
-      <Modal title="Them co so ATTP" open={businessModal} onCancel={() => setBusinessModal(false)} onOk={() => businessForm.submit()} okText="Luu">
-        <Form form={businessForm} layout="vertical" onFinish={handleCreateBusiness}>
-          <Form.Item name="name" label="Ten co so" rules={[{ required: true }]}><Input /></Form.Item>
-          <Form.Item name="address" label="Dia chi" rules={[{ required: true }]}><Input /></Form.Item>
+      <Modal title={editingBusiness ? 'Sửa cơ sở ATTP' : 'Thêm cơ sở ATTP'} open={businessModal} onCancel={() => setBusinessModal(false)} onOk={() => businessForm.submit()} okText="Lưu" cancelText="Hủy">
+        <Form form={businessForm} layout="vertical" onFinish={handleSaveBusiness}>
+          <Form.Item name="name" label="Tên cơ sở" rules={[{ required: true, message: 'Nhập tên cơ sở' }]}><Input /></Form.Item>
+          <Form.Item name="address" label="Địa chỉ" rules={[{ required: true, message: 'Nhập địa chỉ' }]}><Input /></Form.Item>
           <Row gutter={12}>
-            <Col span={8}><Form.Item name="ownerName" label="Chu co so" rules={[{ required: true }]}><Input /></Form.Item></Col>
-            <Col span={8}><Form.Item name="phoneNumber" label="SDT"><Input /></Form.Item></Col>
-            <Col span={8}><Form.Item name="businessType" label="Loai" rules={[{ required: true }]}><Select options={[{ value: 'Quan an', label: 'Quan an' }, { value: 'San xuat', label: 'San xuat' }, { value: 'Kinh doanh', label: 'Kinh doanh' }, { value: 'Bep an tap the', label: 'Bep an tap the' }]} /></Form.Item></Col>
+            <Col span={8}><Form.Item name="ownerName" label="Chủ cơ sở" rules={[{ required: true, message: 'Nhập tên chủ' }]}><Input /></Form.Item></Col>
+            <Col span={8}><Form.Item name="phoneNumber" label="SĐT"><Input /></Form.Item></Col>
+            <Col span={8}><Form.Item name="businessType" label="Loại" rules={[{ required: true, message: 'Chọn loại' }]}><Select options={[{ value: 'Quán ăn', label: 'Quán ăn' }, { value: 'Sản xuất', label: 'Sản xuất' }, { value: 'Kinh doanh', label: 'Kinh doanh' }, { value: 'Bếp ăn tập thể', label: 'Bếp ăn tập thể' }]} /></Form.Item></Col>
           </Row>
         </Form>
       </Modal>
 
-      <Modal title="Bao cao ngo doc thuc pham" open={poisoningModal} onCancel={() => setPoisoningModal(false)} onOk={() => poisoningForm.submit()} okText="Bao cao" width={600}>
+      <Modal title="Báo cáo ngộ độc thực phẩm" open={poisoningModal} onCancel={() => setPoisoningModal(false)} onOk={() => poisoningForm.submit()} okText="Báo cáo" cancelText="Hủy" width={600}>
         <Form form={poisoningForm} layout="vertical" onFinish={handleReportPoisoning}>
           <Row gutter={12}>
-            <Col span={12}><Form.Item name="incidentDate" label="Ngay xay ra" rules={[{ required: true }]}><DatePicker format="DD/MM/YYYY" style={{ width: '100%' }} /></Form.Item></Col>
-            <Col span={12}><Form.Item name="location" label="Dia diem" rules={[{ required: true }]}><Input /></Form.Item></Col>
+            <Col span={12}><Form.Item name="incidentDate" label="Ngày xảy ra" rules={[{ required: true, message: 'Chọn ngày' }]}><DatePicker format="DD/MM/YYYY" style={{ width: '100%' }} /></Form.Item></Col>
+            <Col span={12}><Form.Item name="location" label="Địa điểm" rules={[{ required: true, message: 'Nhập địa điểm' }]}><Input /></Form.Item></Col>
           </Row>
           <Row gutter={12}>
-            <Col span={8}><Form.Item name="affectedCount" label="So nguoi mac" rules={[{ required: true }]}><InputNumber style={{ width: '100%' }} min={0} /></Form.Item></Col>
-            <Col span={8}><Form.Item name="hospitalizedCount" label="So nhap vien"><InputNumber style={{ width: '100%' }} min={0} /></Form.Item></Col>
-            <Col span={8}><Form.Item name="reportedBy" label="Nguoi bao cao" rules={[{ required: true }]}><Input /></Form.Item></Col>
+            <Col span={8}><Form.Item name="affectedCount" label="Số người mắc" rules={[{ required: true, message: 'Nhập số' }]}><InputNumber style={{ width: '100%' }} min={0} /></Form.Item></Col>
+            <Col span={8}><Form.Item name="hospitalizedCount" label="Số nhập viện"><InputNumber style={{ width: '100%' }} min={0} /></Form.Item></Col>
+            <Col span={8}><Form.Item name="reportedBy" label="Người báo cáo" rules={[{ required: true, message: 'Nhập tên' }]}><Input /></Form.Item></Col>
           </Row>
-          <Form.Item name="suspectedFood" label="Thuc pham nghi ngo" rules={[{ required: true }]}><Input /></Form.Item>
-          <Form.Item name="source" label="Nguon goc"><Input /></Form.Item>
+          <Form.Item name="suspectedFood" label="Thực phẩm nghi ngờ" rules={[{ required: true, message: 'Nhập thực phẩm' }]}><Input /></Form.Item>
+          <Form.Item name="source" label="Nguồn gốc"><Input /></Form.Item>
         </Form>
       </Modal>
     </Spin>
